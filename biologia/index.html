@@ -2,12 +2,11 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mergulho nos Cnidários</title>
-  <!-- Fontes do Google Fonts para títulos e textos -->
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=EB+Garamond:wght@700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --verde-escuro: #185331;
@@ -17,8 +16,7 @@
       --verde-destaque: #1f6e3d;
       --cinza: #445c7c;
       --branco: #FFF;
-      --fonte-titulo: 'EB Garamond', serif;
-      --fonte-texto: 'Montserrat', Arial, sans-serif;
+      --fonte-texto: 'Montserrat', sans-serif;
     }
 
     * {
@@ -34,34 +32,61 @@
       min-width: 320px;
     }
 
+    /* HEADER - categories below title */
     header {
-      background: linear-gradient(to bottom, #2ca94fcc 0%, #185331ee 100%);
-      padding: 52px 0 28px 0;
-      text-align: center;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: #222; /* dark background */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 24px; /* increased padding for bigger size */
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      user-select: none;
+    }
+
+    header .logo {
       color: var(--verde-claro);
-      box-shadow: 0 3px 30px #2ca94f66;
+      font-family: var(--fonte-texto);
+      font-weight: 600;
+      font-size: 2rem; /* increased font size */
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
     }
 
-    header h1 {
-      font-size: 2.4em;
-      font-family: var(--fonte-titulo);
-      letter-spacing: 2px;
-      text-shadow: 0 2px 8px #1f6e3dcc;
-      margin-bottom: 10px;
-      font-weight: 700;
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px; /* increased gap for bigger spacing */
+      padding: 0;
+      margin: 0;
+      user-select: none;
     }
 
-    header p {
-      font-size: 1.23em;
-      font-style: italic;
-      color: var(--verde-mais-claro);
-      text-shadow: 0 1px 2px #185331cc;
-      font-family: var(--fonte-titulo);
+    nav ul li a {
+      color: var(--verde-claro);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem; /* increased font size */
+      transition: color 0.3s ease;
+      padding: 8px 4px;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: var(--verde);
+      outline: none;
+      border-bottom: 3px solid var(--verde);
     }
 
     main {
       max-width: 1050px;
-      margin: 0 auto;
+      margin: 120px auto 40px auto; /* increased margin top for bigger header */
       padding: 34px 22px 42px 22px;
       background: var(--verde-mais-claro);
       border-radius: 0 0 28px 28px;
@@ -139,7 +164,7 @@
       cursor: pointer;
       margin-bottom: 2px;
       display: inline-block;
-      transition: color .2s;
+      transition: color 0.2s;
     }
 
     .options input[type="radio"] {
@@ -159,7 +184,7 @@
       cursor: pointer;
       font-family: var(--fonte-titulo);
       box-shadow: 0 2px 7px #18533144;
-      transition: background .2s, color .2s;
+      transition: background 0.2s, color 0.2s;
       display: block;
     }
 
@@ -174,7 +199,7 @@
       margin: 4px 0 0 0;
       min-height: 1.1em;
       font-size: 0.99em;
-      transition: color .2s;
+      transition: color 0.2s;
     }
 
     .result {
@@ -198,19 +223,24 @@
 
     @media (max-width: 600px) {
       header {
-        padding: 34px 0 17px 0;
+        padding: 16px 16px;
       }
 
-      header h1 {
-        font-size: 1.23em;
+      nav ul {
+        gap: 18px;
+      }
+
+      header .logo {
+        font-size: 1.6rem;
       }
 
       main {
-        padding: 7px 3px;
+        margin: 140px 10px 40px 10px;
+        padding: 14px 14px 25px 14px;
       }
 
       .quiz-container {
-        padding: 10px 3px;
+        padding: 14px 12px;
       }
 
       section h2 {
@@ -219,250 +249,233 @@
     }
 
     .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  margin-top: 20px;
-}
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 20px;
+    }
 
-.card {
-  width: 200px;
-  height: 150px;
-  perspective: 1000px;
-}
+    .card {
+      width: 200px;
+      height: 150px;
+      perspective: 1000px;
+    }
 
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
 
-.card:hover .card-inner {
-  transform: rotateY(180deg);
-}
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
 
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #e0f7fa;
-  color: #004d40;
-  text-align: center;
-}
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e0f7fa;
+      color: #004d40;
+      text-align: center;
+    }
 
-.card-back {
-  background: #b2dfdb;
-  transform: rotateY(180deg);
-}
+    .card-back {
+      background: #b2dfdb;
+      transform: rotateY(180deg);
+    }
+
+    footer {
+      text-align: center;
+      margin: 48px 0 20px 0;
+      color: var(--verde-escuro);
+      font-family: var(--fonte-texto);
+      font-weight: 600;
+      font-size: 0.95em;
+      user-select: none;
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Mergulho no Mundo dos Cnidários</h1>
-    <p>Descubra a incrível diversidade dos cnidários: anatomia, funções, reprodução, curiosidades e sua importância nos
-      ecossistemas!</p>
+    <div class="logo">Mergulho nos Cnidários</div>
+    <nav>
+      <ul>
+        <li><a href="#anatomia">Anatomia</a></li>
+        <li><a href="#celulas">Células</a></li>
+        <li><a href="#mecanismos">Alimentação</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#reproducao">Reprodução</a></li>
+        <li><a href="#ciclo">Ciclo de Vida</a></li>
+        <li><a href="#conservacao">Conservação</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
-    <section>
-      <h2> ANATOMIA</h2>
-      <p>Os cnidários possuem um corpo com simetria radial, o que significa que podem ser divididos em várias partes
-        iguais ao redor de um ponto central. Eles são diblásticos, ou seja, apresentam duas camadas germinativas
-        principais: a ectoderme (camada externa) e a endoderme (camada interna), separadas pela mesogleia, uma
-        substância gelatinosa que confere a flexibilidade necessária para o organismo.</p>
+    <section id="anatomia">
+      <h2>ANATOMIA</h2>
+      <p>Os cnidários possuem um corpo com simetria radial, o que significa que podem ser divididos em várias partes iguais ao redor de um ponto central. Eles são diblásticos, ou seja, apresentam duas camadas germinativas principais: a ectoderme (camada externa) e a endoderme (camada interna), separadas pela mesogleia, uma substância gelatinosa que confere a flexibilidade necessária para o organismo.</p>
       <p>Além disso, eles apresentam duas formas principais:</p>
       <ul>
-        <li><strong>Pólipo:</strong> Esta forma é tubular e geralmente fixa-se ao substrato, como ocorre com as anêmonas
-          e corais. Os pólipos têm uma abertura na parte superior, que serve como boca e ânus.</li>
-        <li><strong>Medusa:</strong> A medusa é livre-natante e possui uma forma de sino. Esse estágio é característico
-          das águas-vivas, que nadam livremente e utilizam suas tentáculos para capturar presas.</li>
+        <li><strong>Pólipo:</strong> Esta forma é tubular e geralmente fixa-se ao substrato, como ocorre com as anêmonas e corais. Os pólipos têm uma abertura na parte superior, que serve como boca e ânus.</li>
+        <li><strong>Medusa:</strong> A medusa é livre-natante e possui uma forma de sino. Esse estágio é característico das águas-vivas, que nadam livremente e utilizam suas tentáculos para capturar presas.</li>
       </ul>
     </section>
-    <section>
-        <section>
-            <h2 style="text-align: center;">CÉLULAS ESPECIALIZADAS DOS CNIDÁRIOS</h2>
-            <div class="card-container">
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <h4>Cnidócitos</h4>
-                  </div>
-                  <div class="card-back">
-                    <p>Responsáveis pela defesa e captura de presas. Contêm nematocistos com toxinas que paralisam pequenos organismos.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <h4>Epitelio-musculares</h4>
-                  </div>
-                  <div class="card-back">
-                    <p>Permitem a movimentação do organismo com contrações e relaxamentos do corpo.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <h4>Células Nervosas</h4>
-                  </div>
-                  <div class="card-back">
-                    <p>Formam uma rede difusa e primitiva que responde a estímulos como luz e contato. Não há cérebro central.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <h4>Células Glandulares</h4>
-                  </div>
-                  <div class="card-back">
-                    <p>Produzem enzimas digestivas na cavidade gastrovascular, facilitando a digestão e absorção de nutrientes.</p>
-                  </div>
-                </div>
-              </div>
+    <section id="celulas">
+      <h2 style="text-align: center;">CÉLULAS ESPECIALIZADAS DOS CNIDÁRIOS</h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h4>Cnidócitos</h4>
             </div>
-          </section>
-    </section>
-    <section>
-      <h2> MECANISMOS DE ALIMENTAÇÃO</h2>
-      <p>Os cnidários são predominantemente carnívoros. Eles capturam suas presas utilizando os tentáculos cobertos por
-        cnidócitos, que disparam nematocistos, paralisando ou matando as presas. Uma vez capturada, a presa é levada até
-        a boca, onde ocorre a digestão.</p>
-      <p>A digestão é extracelular, ocorrendo na cavidade gastrovascular, e posterior absorção dos nutrientes é feita
-        por digestão intracelular. O sistema digestivo dos cnidários é simplificado, com apenas uma única abertura que
-        serve como boca e ânus.</p>
-      <img
-        src="https://lh4.googleusercontent.com/proxy/V1IdfGayRbeMUHqkkBtXNoIHzUldjeMAVB5b1gYM_AC3-znceP_Y887WZofmJzSGE5kt72pM0THYZrVm-irwZ1k-05NogYzCECC29yPiEsrF-0mtB89kZaNrHL0xZcSUmXjo1OA"
-        alt="Mecanismos de alimentação dos cnidários">
-    </section>
-    <section>
-        <section>
-            <h2 style="text-align: center;">CLASSES DOS CNIDÁRIOS</h2>
-            <div class="card-container">
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <h4>Hydrozoa</h4>
-                  </div>
-                  <div class="card-back">
-                    <p>Predominância da forma de pólipo. Exemplos: Hydra e colônias de hidras marinhas com ciclo de vida alternado.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <h4>Scyphozoa</h4>
-                  </div>
-                  <div class="card-back">
-                    <p>Águas-vivas verdadeiras, como a <em>Aurelia</em>, com forma de medusa dominante.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <h4>Cubozoa</h4>
-                  </div>
-                  <div class="card-back">
-                    <p>Medusas cúbicas (“vespas-do-mar”) altamente venenosas e perigosas para humanos.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <h4>Anthozoa</h4>
-                  </div>
-                  <div class="card-back">
-                    <p>Corais e anêmonas. Não possuem fase de medusa e vivem fixos ao substrato marinho.</p>
-                  </div>
-                </div>
-              </div>
+            <div class="card-back">
+              <p>Responsáveis pela defesa e captura de presas. Contêm nematocistos com toxinas que paralisam pequenos organismos.</p>
             </div>
-          </section>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h4>Epitelio-musculares</h4>
+            </div>
+            <div class="card-back">
+              <p>Permitem a movimentação do organismo com contrações e relaxamentos do corpo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h4>Células Nervosas</h4>
+            </div>
+            <div class="card-back">
+              <p>Formam uma rede difusa e primitiva que responde a estímulos como luz e contato. Não há cérebro central.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h4>Células Glandulares</h4>
+            </div>
+            <div class="card-back">
+              <p>Produzem enzimas digestivas na cavidade gastrovascular, facilitando a digestão e absorção de nutrientes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section>
-      <h2> MÉTODOS DE REPRODUÇÃO (ASSEXUADA E SEXUADA)</h2>
-      <p>Os cnidários apresentam métodos tanto de reprodução assexuada quanto sexuada. Na reprodução assexuada, o pólipo
-        pode se reproduzir por brotamento, criando novos indivíduos geneticamente idênticos. Já na reprodução sexuada,
-        os cnidários liberam gametas (espermatozoides e óvulos) na água, onde ocorre a fertilização. A fertilização dá
-        origem à larva plânula, que posteriormente se fixa no substrato e se transforma em pólipo.</p>
-      <img src="https://static.significados.com.br/foto/tipos-de-reproducao-assexuada-e-sexuada-og.jpg"
-        alt="Mecanismos de alimentação dos cnidários">
+    <section id="mecanismos">
+      <h2>MECANISMOS DE ALIMENTAÇÃO</h2>
+      <p>Os cnidários são predominantemente carnívoros. Eles capturam suas presas utilizando os tentáculos cobertos por cnidócitos, que disparam nematocistos, paralisando ou matando as presas. Uma vez capturada, a presa é levada até a boca, onde ocorre a digestão.</p>
+      <p>A digestão é extracelular, ocorrendo na cavidade gastrovascular, e posterior absorção dos nutrientes é feita por digestão intracelular. O sistema digestivo dos cnidários é simplificado, com apenas uma única abertura que serve como boca e ânus.</p>
+      <img src="https://lh4.googleusercontent.com/proxy/V1IdfGayRbeMUHqkkBtXNoIHzUldjeMAVB5b1gYM_AC3-znceP_Y887WZofmJzSGE5kt72pM0THYZrVm-irwZ1k-05NogYzCECC29yPiEsrF-0mtB89kZaNrHL0xZcSUmXjo1OA" alt="Mecanismos de alimentação dos cnidários" />
     </section>
-    <section>
-      <h2> CICLO DE VIDA</h2>
-      <p>O ciclo de vida dos cnidários é caracterizado pela alternância de gerações, fenômeno chamado metagênese. O
-        ciclo envolve duas fases principais:</p>
+    <section id="classes">
+      <h2 style="text-align: center;">CLASSES DOS CNIDÁRIOS</h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h4>Hydrozoa</h4>
+            </div>
+            <div class="card-back">
+              <p>Predominância da forma de pólipo. Exemplos: Hydra e colônias de hidras marinhas com ciclo de vida alternado.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h4>Scyphozoa</h4>
+            </div>
+            <div class="card-back">
+              <p>Águas-vivas verdadeiras, como a <em>Aurelia</em>, com forma de medusa dominante.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h4>Cubozoa</h4>
+            </div>
+            <div class="card-back">
+              <p>Medusas cúbicas (“vespas-do-mar”) altamente venenosas e perigosas para humanos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h4>Anthozoa</h4>
+            </div>
+            <div class="card-back">
+              <p>Corais e anêmonas. Não possuem fase de medusa e vivem fixos ao substrato marinho.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="reproducao">
+      <h2>MÉTODOS DE REPRODUÇÃO (ASSEXUADA E SEXUADA)</h2>
+      <p>Os cnidários apresentam métodos tanto de reprodução assexuada quanto sexuada. Na reprodução assexuada, o pólipo pode se reproduzir por brotamento, criando novos indivíduos geneticamente idênticos. Já na reprodução sexuada, os cnidários liberam gametas (espermatozoides e óvulos) na água, onde ocorre a fertilização. A fertilização dá origem à larva plânula, que posteriormente se fixa no substrato e se transforma em pólipo.</p>
+      <img src="https://static.significados.com.br/foto/tipos-de-reproducao-assexuada-e-sexuada-og.jpg" alt="Mecanismos de alimentação dos cnidários" />
+    </section>
+    <section id="ciclo">
+      <h2>CICLO DE VIDA</h2>
+      <p>O ciclo de vida dos cnidários é caracterizado pela alternância de gerações, fenômeno chamado metagênese. O ciclo envolve duas fases principais:</p>
       <ul>
-        <li><strong>Pólipo:</strong> Forma assexuada, fixada ao substrato e capaz de produzir medusas por brotamento.
-        </li>
+        <li><strong>Pólipo:</strong> Forma assexuada, fixada ao substrato e capaz de produzir medusas por brotamento.</li>
         <li><strong>Medusa:</strong> Forma sexuada, que libera gametas para a fecundação e origem da larva plânula.</li>
       </ul>
-      <p>Após a fertilização, a larva plânula nada até se fixar em um substrato, formando um novo pólipo. Esse ciclo
-        pode variar conforme a espécie e as condições ambientais.</p>
-      <img src="https://static.escolakids.uol.com.br/2020/11/alternancia-de-geracao-cnidario.jpg"
-        alt="Ciclo de vida dos cnidários">
+      <p>Após a fertilização, a larva plânula nada até se fixar em um substrato, formando um novo pólipo. Esse ciclo pode variar conforme a espécie e as condições ambientais.</p>
+      <img src="https://static.escolakids.uol.com.br/2020/11/alternancia-de-geracao-cnidario.jpg" alt="Ciclo de vida dos cnidários" />
     </section>
-    <section>
-      <h2> PAPEL DO SER VIVO NOS ECOSSISTEMAS</h2>
+    <section id="conservacao">
+      <h2>PAPEL DO SER VIVO NOS ECOSSISTEMAS</h2>
       <p>Os cnidários desempenham vários papéis cruciais nos ecossistemas marinhos:</p>
       <ul>
-        <li>São predadores de pequenos organismos, controlando populações de zooplânctons e outros invertebrados
-          marinhos.</li>
-        <li>Servem de alimento para diversos animais marinhos, como peixes, tartarugas e até outras espécies de
-          cnidários.</li>
-        <li>Os corais, por sua vez, formam recifes, que são habitats ricos em biodiversidade, sustentando milhares de
-          outras espécies marinhas.</li>
+        <li>São predadores de pequenos organismos, controlando populações de zooplânctons e outros invertebrados marinhos.</li>
+        <li>Servem de alimento para diversos animais marinhos, como peixes, tartarugas e até outras espécies de cnidários.</li>
+        <li>Os corais, por sua vez, formam recifes, que são habitats ricos em biodiversidade, sustentando milhares de outras espécies marinhas.</li>
       </ul>
     </section>
     <section>
-      <h2> IMPORTÂNCIA PARA A BIODIVERSIDADE E OS ECOSSISTEMAS</h2>
-      <p>Os cnidários, especialmente os corais, desempenham um papel fundamental na construção e manutenção dos recifes
-        de corais, que são um dos ecossistemas mais ricos em biodiversidade do planeta. Além de abrigar diversas
-        espécies marinhas, os recifes de corais protegem as costas de erosões e tempestades, atuando como uma barreira
-        natural contra o avanço do mar.</p>
+      <h2>IMPORTÂNCIA PARA A BIODIVERSIDADE E OS ECOSSISTEMAS</h2>
+      <p>Os cnidários, especialmente os corais, desempenham um papel fundamental na construção e manutenção dos recifes de corais, que são um dos ecossistemas mais ricos em biodiversidade do planeta. Além de abrigar diversas espécies marinhas, os recifes de corais protegem as costas de erosões e tempestades, atuando como uma barreira natural contra o avanço do mar.</p>
     </section>
     <section>
-      <h2> AMEAÇAS AOS CNIDÁRIOS</h2>
+      <h2>AMEAÇAS AOS CNIDÁRIOS</h2>
       <p>Os cnidários, especialmente os corais, estão enfrentando várias ameaças devido às atividades humanas:</p>
       <ul>
         <li>Poluição dos oceanos, que pode afetar a saúde dos recifes de corais.</li>
-        <li>Mudanças climáticas, que elevam a temperatura da água e podem causar o fenômeno de branqueamento dos corais.
-        </li>
+        <li>Mudanças climáticas, que elevam a temperatura da água e podem causar o fenômeno de branqueamento dos corais.</li>
         <li>Acidificação das águas, que prejudica a formação de esqueletos de carbonato de cálcio pelos corais.</li>
       </ul>
     </section>
     <section>
-      <h2> CONSERVAÇÃO DOS CNIDÁRIOS</h2>
-      <p>As iniciativas de conservação dos cnidários são fundamentais para a preservação dos ecossistemas marinhos.
-        Projetos de restauração de recifes de corais, como o cultivo de corais em viveiros, e regulamentações sobre a
-        pesca sustentável têm se mostrado eficazes. Além disso, a redução da poluição e das emissões de gases de efeito
-        estufa também é crucial para o bem-estar desses organismos.</p>
+      <h2>CONSERVAÇÃO DOS CNIDÁRIOS</h2>
+      <p>As iniciativas de conservação dos cnidários são fundamentais para a preservação dos ecossistemas marinhos. Projetos de restauração de recifes de corais, como o cultivo de corais em viveiros, e regulamentações sobre a pesca sustentável têm se mostrado eficazes. Além disso, a redução da poluição e das emissões de gases de efeito estufa também é crucial para o bem-estar desses organismos.</p>
     </section>
     <section>
-      <h2> CURIOSIDADES SOBRE CNIDÁRIOS</h2>
+      <h2>CURIOSIDADES SOBRE CNIDÁRIOS</h2>
       <ul>
-        <li>Algumas espécies de águas-vivas, como a <em>Turritopsis dohrnii</em>, são conhecidas por sua capacidade de
-          reverter o envelhecimento, o que as torna praticamente imortais.</li>
-        <li>Os corais podem viver por milhares de anos e formar grandes estruturas como os recifes, que são ecossistemas
-          fundamentais para a vida marinha.</li>
-        <li>Os cnidários possuem um sistema nervoso primitivo, mas têm a capacidade de responder de forma coordenada a
-          estímulos ambientais, como luz e movimento na água.</li>
+        <li>Algumas espécies de águas-vivas, como a <em>Turritopsis dohrnii</em>, são conhecidas por sua capacidade de reverter o envelhecimento, o que as torna praticamente imortais.</li>
+        <li>Os corais podem viver por milhares de anos e formar grandes estruturas como os recifes, que são ecossistemas fundamentais para a vida marinha.</li>
+        <li>Os cnidários possuem um sistema nervoso primitivo, mas têm a capacidade de responder de forma coordenada a estímulos ambientais, como luz e movimento na água.</li>
       </ul>
     </section>
     <section class="quiz-container">
@@ -471,45 +484,45 @@
         <div class="question">
           <p>1. Qual é a forma fixa dos cnidários?</p>
           <div class="options">
-            <label><input type="radio" name="q1" value="a"> Medusa</label><br>
-            <label><input type="radio" name="q1" value="b"> Pólipo</label><br>
-            <label><input type="radio" name="q1" value="c"> Larva</label>
+            <label><input type="radio" name="q1" value="a" /> Medusa</label><br />
+            <label><input type="radio" name="q1" value="b" /> Pólipo</label><br />
+            <label><input type="radio" name="q1" value="c" /> Larva</label>
           </div>
           <div class="feedback" id="feedback-q1"></div>
         </div>
         <div class="question">
           <p>2. O que os cnidócitos fazem?</p>
           <div class="options">
-            <label><input type="radio" name="q2" value="a"> Capturam presas</label><br>
-            <label><input type="radio" name="q2" value="b"> Produzem enzimas</label><br>
-            <label><input type="radio" name="q2" value="c"> Movimentam o organismo</label>
+            <label><input type="radio" name="q2" value="a" /> Capturam presas</label><br />
+            <label><input type="radio" name="q2" value="b" /> Produzem enzimas</label><br />
+            <label><input type="radio" name="q2" value="c" /> Movimentam o organismo</label>
           </div>
           <div class="feedback" id="feedback-q2"></div>
         </div>
         <div class="question">
           <p>3. Qual é o principal habitat dos cnidários?</p>
           <div class="options">
-            <label><input type="radio" name="q3" value="a"> Água doce</label><br>
-            <label><input type="radio" name="q3" value="b"> Água salgada</label><br>
-            <label><input type="radio" name="q3" value="c"> Terra</label>
+            <label><input type="radio" name="q3" value="a" /> Água doce</label><br />
+            <label><input type="radio" name="q3" value="b" /> Água salgada</label><br />
+            <label><input type="radio" name="q3" value="c" /> Terra</label>
           </div>
           <div class="feedback" id="feedback-q3"></div>
         </div>
         <div class="question">
           <p>4. Os cnidários são considerados:</p>
           <div class="options">
-            <label><input type="radio" name="q4" value="a"> Vertebrados</label><br>
-            <label><input type="radio" name="q4" value="b"> Invertebrados</label><br>
-            <label><input type="radio" name="q4" value="c"> Mamíferos</label>
+            <label><input type="radio" name="q4" value="a" /> Vertebrados</label><br />
+            <label><input type="radio" name="q4" value="b" /> Invertebrados</label><br />
+            <label><input type="radio" name="q4" value="c" /> Mamíferos</label>
           </div>
           <div class="feedback" id="feedback-q4"></div>
         </div>
         <div class="question">
           <p>5. Qual é a função dos tentáculos nos cnidários?</p>
           <div class="options">
-            <label><input type="radio" name="q5" value="a"> Locomoção</label><br>
-            <label><input type="radio" name="q5" value="b"> Captura de presas</label><br>
-            <label><input type="radio" name="q5" value="c"> Respiração</label>
+            <label><input type="radio" name="q5" value="a" /> Locomoção</label><br />
+            <label><input type="radio" name="q5" value="b" /> Captura de presas</label><br />
+            <label><input type="radio" name="q5" value="c" /> Respiração</label>
           </div>
           <div class="feedback" id="feedback-q5"></div>
         </div>
@@ -519,7 +532,7 @@
     </section>
 
     <section style="text-align: center;">
-      <h2>Aúdios sobre cnidários</h2> 
+      <h2>Aúdios sobre cnidários</h2>
       <p>ANATOMIA</p>
       <audio src="bloco 1.mp3" controls></audio>
       <p> FUNÇÕES DAS CÉLULAS ESPECIALIZADAS e MECANISMOS DE ALIMENTAÇÃO</p>
@@ -532,13 +545,11 @@
       <audio src="bloco 8 e 9.mp3" controls></audio>
       <p>CONSERVAÇÃO DOS CNIDÁRIOS e CURIOSIDADES SOBRE CNIDÁRIOS </p>
       <audio src="bloco 10.mp3" controls></audio>
-      <p>Bloco 11</p>
-      <audio src="bloco 11.mp3" controls></audio>
-
+      
     </section>
   </main>
   <footer>
-    &copy; 2025 Mergulho nos Cnidários · Layout verde adaptado
+    &copy; Guilherme Ferreira Matias de Oliveira - Biologia 2025 
   </footer>
   <script>
     function checkAnswers() {
@@ -554,7 +565,7 @@
       const form = document.getElementById('quizForm');
 
       for (let question in answers) {
-        let userAnswer = "";
+        let userAnswer = '';
         const radios = form.elements[question];
         if (radios) {
           if (radios.length) {
@@ -571,20 +582,19 @@
         const feedbackDiv = document.getElementById('feedback-' + question);
         if (userAnswer === answers[question]) {
           score++;
-          feedbackDiv.innerHTML = "Correto!";
-          feedbackDiv.style.color = "seagreen";
+          feedbackDiv.innerHTML = 'Correto!';
+          feedbackDiv.style.color = 'seagreen';
         } else {
-          let correta = "";
-          if (question === "q1") correta = "Pólipo";
-          if (question === "q2") correta = "Capturam presas";
-          if (question === "q3") correta = "Água salgada";
-          if (question === "q4") correta = "Invertebrados";
-          if (question === "q5") correta = "Captura de presas";
-          feedbackDiv.innerHTML = "Incorreto! A resposta correta é: <b>" + correta + "</b>";
-          feedbackDiv.style.color = "#b71c1c";
+          let correta = '';
+          if (question === 'q1') correta = 'Pólipo';
+          if (question === 'q2') correta = 'Capturam presas';
+          if (question === 'q3') correta = 'Água salgada';
+          if (question === 'q4') correta = 'Invertebrados';
+          if (question === 'q5') correta = 'Captura de presas';
+          feedbackDiv.innerHTML = 'Incorreto! A resposta correta é: <b>' + correta + '</b>';
+          feedbackDiv.style.color = '#b71c1c';
         }
       }
-
       const resultDiv = document.getElementById('result');
       resultDiv.innerHTML = `Você acertou <b>${score}</b> de <b>${Object.keys(answers).length}</b> perguntas.`;
     }
