@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* Definir variáveis para cores */
 :root {
   --primary-color: #2a7f62;
@@ -16,7 +17,7 @@
 
 /* Fonte e configurações básicas */
 body {
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--light-color);
