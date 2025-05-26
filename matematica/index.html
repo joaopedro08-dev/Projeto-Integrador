@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática Financeira - Juros Simples e Compostos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <header class="header">
+        <h1>Juros Simples e Juros Compostos</h1>
+        <h3>Explore os Conceitos de Matemática Financeira</h3>
+        <nav class="nav">
+            <a href="#intro">Introdução</a>
+            <a href="#simples">Juros Simples</a>
+            <a href="#compostos">Juros Compostos</a>
+            <a href="#calculator">Calculadora</a>
+            <a href="#examples">Exemplos Práticos</a>
+            <a href="#quiz">Quiz Interativo</a>
+            <a href="#resources">Recursos</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="content" id="intro">
+            <article class="text-section">
+                <h2>Introdução à Matemática Financeira</h2>
+                <p>A matemática financeira é uma área essencial para entender como o dinheiro cresce ou se torna mais caro ao longo do tempo. Dois conceitos fundamentais são os juros simples e os juros compostos, que diferem na forma como os juros são calculados
+                    e aplicados.</p>
+                <p>Este guia explora essas diferenças, oferece exemplos práticos e ferramentas interativas para ajudá-lo a dominar esses conceitos. Ideal para estudantes, investidores e qualquer pessoa interessada em finanças pessoais.</p>
+            </article>
+        </section>
+
+        <section class="content" id="simples">
+            <article class="text-section">
+                <h2>Juros Simples</h2>
+                <p>Os juros simples são calculados exclusivamente sobre o valor inicial (capital) do investimento ou empréstimo, sem considerar a acumulação de juros anteriores. São comuns em empréstimos de curto prazo ou financiamentos específicos.</p>
+                <p><strong>Fórmula:</strong> <code>J = C × i × t</code></p>
+                <ul>
+                    <li><strong>J</strong> = Juros</li>
+                    <li><strong>C</strong> = Capital inicial</li>
+                    <li><strong>i</strong> = Taxa de juros por período</li>
+                    <li><strong>t</strong> = Tempo</li>
+                </ul>
+                <p><strong>Exemplo:</strong> Investindo R$ 2.000,00 a 3% ao ano por 5 anos: <code>J = 2000 × 0.03 × 5 = 300</code>. Total: R$ 2.300,00.</p>
+            </article>
+        </section>
+
+        <section class="content" id="compostos">
+            <article class="text-section">
+                <h2>Juros Compostos</h2>
+                <p>Os juros compostos são aplicados sobre o capital inicial mais os juros acumulados de períodos anteriores, resultando em um crescimento exponencial. São ideais para investimentos de longo prazo.</p>
+                <p><strong>Fórmula:</strong> <code>M = C × (1 + i)<sup>t</sup></code></p>
+                <ul>
+                    <li><strong>M</strong> = Montante final</li>
+                    <li><strong>C</strong> = Capital inicial</li>
+                    <li><strong>i</strong> = Taxa de juros por período</li>
+                    <li><strong>t</strong> = Tempo</li>
+                </ul>
+                <p><strong>Exemplo:</strong> Investindo R$ 2.000,00 a 3% ao ano por 5 anos: <code>M = 2000 × (1 + 0.03)<sup>5</sup> ≈ 2.319,47</code>.</p>
+            </article>
+        </section>
+
+        <section class="content" id="calculator">
+            <article class="text-section">
+                <h2>Calculadora Interativa</h2>
+                <p>Calcule seus próprios exemplos de juros simples e compostos.</p>
+                <div class="calculator">
+                    <input type="number" id="capital" placeholder="Capital (R$)" required>
+                    <input type="number" id="rate" placeholder="Taxa (%)" step="0.01" required>
+                    <input type="number" id="time" placeholder="Tempo (anos)" required>
+                    <select id="type">
+                        <option value="simple">Juros Simples</option>
+                        <option value="compound">Juros Compostos</option>
+                    </select>
+                    <button onclick="calculate()">Calcular</button>
+                    <p id="result"></p>
+                </div>
+            </article>
+        </section>
+
+        <section class="content" id="examples">
+            <article class="text-section">
+                <h2>Exemplos Práticos</h2>
+                <h3>Exemplo 1: Empréstimo</h3>
+                <p>Empréstimo de R$ 5.000,00 a 4% ao ano por 2 anos com juros simples: <code>J = 5000 × 0.04 × 2 = 400</code>. Total: R$ 5.400,00.</p>
+                <h3>Exemplo 2: Investimento</h3>
+                <p>Investimento de R$ 10.000,00 a 5% ao ano por 10 anos com juros compostos: <code>M = 10000 × (1 + 0.05)<sup>10</sup> ≈ 16.288,95</code>.</p>
+            </article>
+        </section>
+
+        <section class="content" id="quiz">
+            <article class="text-section">
+                <h2>Quiz Interativo</h2>
+                <div class="quiz">
+                    <p>1. Qual a diferença principal entre juros simples e compostos?</p>
+                    <input type="radio" name="q1" value="a"> a) Juros simples acumulam sobre os juros.<br>
+                    <input type="radio" name="q1" value="b"> b) Juros compostos são calculados apenas no capital.<br>
+                    <input type="radio" name="q1" value="c"> c) Juros compostos acumulam sobre capital e juros anteriores.<br>
+                    <button onclick="checkAnswer()">Verificar</button>
+                    <p id="quiz-result"></p>
+                </div>
+            </article>
+        </section>
+
+        <section class="content" id="resources">
+            <article class="text-section">
+                <h2>Recursos Adicionais</h2>
+                <div class="card video-card">
+                    <i class="fas fa-play-circle fa-3x"></i>
+                    <div class="card-content">
+                        <h3>Assista ao vídeo</h3>
+                        <p>Aprenda com exemplos visuais.</p>
+                        <video src="Matemáticas financeira projeto integrador.mp4" controls width="100%" height="400px"></video>
+                    </div>
+                </div>
+                <div class="card download-card">
+                    <i class="fas fa-file-download fa-3x"></i>
+                    <div class="card-content">
+                        <h3>Baixe o material</h3>
+                        <p>Guia completo em PDF.</p>
+                        <a href="pptx/Slide Matemáticas financeira projeto integrador.pptx" download>Download</a>
+                    </div>
+                </div>
+                <figure class="image-gallery">
+                    <img src="img/MapaMentalMatematicaFinanceira.png" alt="Mapa Mental" width="100%">
+                    <figcaption>Mapa mental de matemática financeira</figcaption>
+                </figure>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Kauany Gabrieli Ribeiro Cavatoni. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div vw class="enabled ">
+        <div vw-access-button class="active "></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper "></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js "></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script>
+        function calculate() {
+            const capital = parseFloat(document.getElementById('capital').value);
+            const rate = parseFloat(document.getElementById('rate').value) / 100;
+            const time = parseFloat(document.getElementById('time').value);
+            const type = document.getElementById('type').value;
+            let result;
+            if (type === 'simple') {
+                result = capital + (capital * rate * time);
+                document.getElementById('result').innerText = `Total: R$ ${result.toFixed(2)} (Juros: R$ ${(capital * rate * time).toFixed(2)})`;
+            } else {
+                result = capital * Math.pow(1 + rate, time);
+                document.getElementById('result').innerText = `Total: R$ ${result.toFixed(2)}`;
+            }
+        }
+
+        function checkAnswer() {
+            const answer = document.querySelector('input[name="q1"]:checked').value;
+            document.getElementById('quiz-result').innerText = answer === 'c' ? 'Correto!' : 'Errado. A resposta certa é: c)';
+        }
+    </script>
+</body>
+
+</html>

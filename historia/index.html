@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo da Borracha no Brasil</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --marrom-escuro: #4E3620;
+            --marrom: #7B5C36;
+            --bege: #FAF3E3;
+            --dourado: #BFA267;
+            --marrom-claro: #D8C1A4;
+            --cinza: #7C6B57;
+            --branco: #FFF;
+            --fonte-texto: 'Montserrat', Arial, serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: var(--bege) url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+            color: var(--marrom-escuro);
+            font-family: var(--fonte-texto);
+            min-width: 320px;
+        }
+        
+        header {
+            background: linear-gradient(to bottom, #a0876fbb 0%, #7b5c36ee 100%), url('banner-borracha.jpg') center/cover no-repeat;
+            padding: 64px 0 36px 0;
+            text-align: center;
+            color: var(--dourado);
+            box-shadow: 0 3px 30px #7b5c3677;
+        }
+        
+        header h1 {
+            font-size: 2.6em;
+            font-family: var(--fonte-titulo);
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px #4e3620cc;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.3em;
+            font-style: italic;
+            color: var(--marrom-claro);
+            text-shadow: 0 1px 2px #4e3620cc;
+            font-family: var(--fonte-titulo);
+        }
+        
+        nav {
+            background: var(--marrom-claro);
+            text-align: center;
+            padding: 13px 0 9px 0;
+            border-bottom: 3px solid var(--dourado);
+            font-family: var(--fonte-titulo);
+            font-size: 1.08em;
+            letter-spacing: 0.04em;
+            box-shadow: 0 2px 6px #bfa26722;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        nav a {
+            color: var(--marrom-escuro);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 18px;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+            transition: all .2s;
+        }
+        
+        nav a:hover {
+            color: var(--dourado);
+            border-bottom: 2px solid var(--dourado);
+        }
+        
+        main {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 36px 22px 42px 22px;
+            background: var(--bege);
+            border-radius: 0 0 28px 28px;
+            box-shadow: 0 4px 20px #7b5c3622;
+            font-size: 1.08em;
+        }
+        
+        .intro-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 38px;
+            margin-bottom: 54px;
+            align-items: stretch;
+        }
+        
+        .intro-info {
+            flex: 2;
+            min-width: 270px;
+        }
+        
+        .intro-info .intro-icon {
+            font-size: 2.5em;
+            color: var(--dourado);
+            vertical-align: middle;
+        }
+        
+        .intro-info h2 {
+            display: inline-block;
+            font-size: 2em;
+            font-family: var(--fonte-titulo);
+            font-weight: 700;
+            margin-left: 12px;
+            vertical-align: middle;
+            letter-spacing: 1px;
+            color: var(--marrom-escuro);
+        }
+        
+        .intro-info p.desc {
+            color: var(--marrom);
+            font-size: 1.14em;
+            margin: 7px 0 20px 0;
+            font-style: italic;
+        }
+        
+        .intro-info p {
+            margin-bottom: 14px;
+            font-size: 1.07em;
+            line-height: 1.75;
+        }
+        
+        .intro-img {
+            flex: 1.5;
+            min-width: 340px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Para alinhar centralizado verticalmente */
+        }
+        
+        .intro-img img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px #7b5c3644;
+            border: 4px solid var(--marrom-claro);
+            background: var(--branco);
+            min-height: 210px;
+            max-height: 320px;
+            display: block;
+        }
+        
+        .aside-block {
+            flex: 1.2;
+            min-width: 220px;
+            margin-left: 24px;
+            background: var(--marrom-claro);
+            border-radius: 16px;
+            padding: 18px 18px;
+            box-shadow: 0 2px 8px #7b5c3622;
+            font-size: 1.01em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: stretch;
+            overflow: hidden;
+        }
+        
+        .aside-block h3 {
+            font-size: 1.21em;
+            font-family: var(--fonte-titulo);
+            font-weight: 700;
+            margin-bottom: 13px;
+            color: var(--dourado);
+            letter-spacing: 1px;
+        }
+        
+        .aside-block .item-titulo {
+            display: block;
+            font-weight: 700;
+            color: var(--marrom-escuro);
+            margin-bottom: 0px;
+            font-size: 1.01em;
+        }
+        
+        .aside-block li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .aside-block ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .aside-block li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .aside-block .icon {
+            font-size: 1.5em;
+            margin-top: 2px;
+            flex-shrink: 0;
+            min-width: 1.5em;
+            text-align: center;
+        }
+        
+        .aside-block .item-text {
+            display: block;
+            font-size: 1em;
+            color: var(--marrom-escuro);
+            line-height: 1.45;
+        }
+        
+        .aside-block strong {
+            font-weight: 700;
+            color: var(--marrom-escuro);
+        }
+        
+        section {
+            margin-bottom: 38px;
+        }
+        
+        section h2 {
+            font-size: 1.45em;
+            color: var(--dourado);
+            font-family: var(--fonte-titulo);
+            margin-bottom: 13px;
+            font-weight: 700;
+        }
+        
+        .galeria {
+            margin: 20px 0 18px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+        
+        .galeria figure {
+            margin: 0;
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .galeria img,
+        .grafico-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 2px 13px #7b5c3622;
+            border: 3px solid var(--dourado);
+            background: var(--branco);
+            min-height: 160px;
+            max-height: 340px;
+            display: block;
+        }
+        
+        .galeria figcaption {
+            font-size: .99em;
+            color: var(--marrom);
+            margin-top: 5px;
+            text-align: left;
+            font-style: italic;
+            width: 98%;
+            align-self: flex-start;
+        }
+        
+        .curiosidade {
+            background: var(--marrom-claro);
+            border-left: 5px solid var(--dourado);
+            margin: 20px 0 18px 0;
+            padding: 12px 22px 13px 19px;
+            border-radius: 8px;
+            font-size: 1.07em;
+            color: var(--marrom-escuro);
+            box-shadow: 0 1px 6px #bfa26722;
+            font-style: italic;
+        }
+        
+        .timeline {
+            list-style: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
+        
+        .timeline li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 26px;
+            font-family: var(--fonte-titulo);
+        }
+        
+        .timeline li::before {
+            content: "ğŸ“œ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--marrom);
+            font-size: 1em;
+        }
+        
+        #quiz {
+            background: var(--marrom-claro);
+            padding: 18px 16px;
+            border-radius: 14px;
+            max-width: 600px;
+            margin: 0 auto 32px auto;
+            box-shadow: 0 0 10px #7b5c3617;
+        }
+        
+        #form-quiz .pergunta {
+            margin-bottom: 16px;
+        }
+        
+        #form-quiz p {
+            font-weight: 600;
+            color: var(--marrom-escuro);
+            font-family: var(--fonte-titulo);
+        }
+        
+        #form-quiz input[type="radio"] {
+            margin-right: 7px;
+            accent-color: var(--dourado);
+        }
+        
+        #form-quiz button {
+            margin-top: 12px;
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+            border: none;
+            padding: 9px 23px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.06em;
+            cursor: pointer;
+            font-family: var(--fonte-titulo);
+            box-shadow: 0 2px 7px #bfa26744;
+            transition: background .2s, color .2s;
+        }
+        
+        #form-quiz button:hover {
+            background: var(--marrom);
+            color: var(--bege);
+        }
+        
+        #resultado-quiz {
+            margin-top: 13px;
+            font-weight: bold;
+            color: var(--dourado);
+            font-size: 1.19em;
+            font-family: var(--fonte-titulo);
+        }
+        /* GrÃ¡ficos customizados */
+        
+        .graficos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 22px 0 16px 0;
+        }
+        
+        .galeria-img,
+        .grafico-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: contain;
+            /* Alterado de 'cover' para 'contain' */
+            border-radius: 14px;
+            box-shadow: 0 2px 13px #7b5c3622;
+            border: 3px solid var(--dourado);
+            background: var(--branco);
+            min-height: 160px;
+            max-height: 340px;
+            display: block;
+        }
+        
+        .grafico {
+            max-width: 480px;
+            width: 100%;
+            flex: 1 1 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--branco);
+            border-radius: 13px;
+            box-shadow: 0 2px 13px #7b5c3622;
+            border: 3px solid var(--marrom-claro);
+            padding: 13px 10px 17px 10px;
+        }
+        
+        .grafico-titulo {
+            font-family: var(--fonte-titulo);
+            color: var(--dourado);
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+        
+        .grafico-caption {
+            font-size: .97em;
+            color: var(--marrom);
+            margin-top: 7px;
+            text-align: left;
+            font-style: italic;
+            width: 98%;
+            align-self: flex-start;
+        }
+        
+        #btn-topo {
+            position: fixed;
+            bottom: 21px;
+            right: 17px;
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+            font-size: 1.38em;
+            border-radius: 50%;
+            height: 38px;
+            width: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 3px 10px #7b5c3622;
+            z-index: 50;
+            border: 2px solid var(--bege);
+            transition: background .2s;
+        }
+        
+        #btn-topo:hover {
+            background: var(--marrom);
+            color: var(--bege);
+        }
+        
+        .podcast-section {
+            background: var(--marrom-claro);
+            border-radius: 18px;
+            box-shadow: 0 2px 13px #7b5c3622;
+            padding: 28px 18px 22px 18px;
+            margin: 38px 0 38px 0;
+            text-align: center;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .podcast-section h2 {
+            color: var(--dourado);
+            margin-bottom: 8px;
+            font-size: 1.5em;
+            font-family: var(--fonte-titulo);
+        }
+        
+        .podcast-section p {
+            color: var(--marrom-escuro);
+            font-size: 1.08em;
+            margin-bottom: 18px;
+            font-style: italic;
+            font-family: var(--fonte-texto);
+        }
+        
+        .podcast-player {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            display: block;
+            background: var(--bege);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px #7b5c3622;
+            padding: 5px;
+        }
+        
+        @media (max-width: 700px) {
+            .podcast-section {
+                padding: 16px 5vw 16px 5vw;
+                max-width: 98vw;
+            }
+            .podcast-player {
+                max-width: 98vw;
+            }
+        }
+        
+        footer {
+            background: var(--marrom);
+            color: var(--bege);
+            text-align: center;
+            font-size: 1.04em;
+            padding: 16px 0 10px 0;
+            margin-top: 26px;
+            font-family: var(--fonte-titulo);
+            letter-spacing: 0.03em;
+        }
+        
+        #resultado-quiz h3 {
+            color: #8B5E3C;
+            margin-bottom: 15px;
+        }
+        
+        #resultado-quiz div {
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            font-size: 1em;
+            line-height: 1.4;
+        }
+        
+        #resultado-quiz div.correto {
+            background-color: #f2e1c1;
+            color: #2e1a0f;
+            border-left: 6px solid #c4a484;
+        }
+        
+        #resultado-quiz div.errado {
+            background-color: #7b5c36ee;
+            color: #fff8f0;
+            border-left: 6px solid #c4a484;
+        }
+        
+        @media (max-width: 900px) {
+            .intro-block {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .aside-block {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            main {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .graficos {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .galeria figure,
+            .grafico {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            header {
+                padding: 34px 0 17px 0;
+            }
+            header h1 {
+                font-size: 1.23em;
+            }
+            main {
+                padding: 7px 3px;
+            }
+            .intro-info h2 {
+                font-size: 1.1em;
+            }
+            .nav {
+                font-size: 0.97em;
+            }
+            .galeria img {
+                max-width: 100%;
+            }
+            .aside-block {
+                padding: 12px 7px;
+            }
+        }
+        
+        .impactos-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            margin: 28px 0 22px 0;
+        }
+        
+        .impacto-card {
+            width: 255px;
+            height: 185px;
+            perspective: 1000px;
+            font-family: var(--fonte-texto);
+            outline: none;
+        }
+        
+        .impacto-card-inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        
+        .impacto-card:hover .impacto-card-inner,
+        .impacto-card:focus .impacto-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .impacto-card-front,
+        .impacto-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border: 2.5px solid var(--marrom-claro);
+            border-radius: 18px;
+            box-shadow: 0 2px 13px #7b5c3622;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--bege);
+            color: var(--marrom-escuro);
+            padding: 15px 10px 13px 10px;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .impacto-card-front {
+            z-index: 2;
+            background: linear-gradient(135deg, var(--marrom-claro) 0%, var(--bege) 100%);
+            color: var(--marrom-escuro);
+        }
+        
+        .impacto-card-front h4 {
+            margin-top: 7px;
+            font-family: var(--fonte-titulo);
+            font-weight: 700;
+            font-size: 1.13em;
+            color: var(--dourado);
+            letter-spacing: 0.5px;
+            line-height: 1.25;
+            word-break: break-word;
+        }
+        
+        .impacto-icon {
+            font-size: 2.3em;
+            color: var(--dourado);
+            margin-bottom: 2px;
+            display: block;
+            min-height: 40px;
+            line-height: 1;
+        }
+        /* SVG Icon (pena) centralizaÃ§Ã£o extra */
+        
+        .impacto-icon svg {
+            display: block;
+            margin: 0 auto !important;
+        }
+        
+        .impacto-card-back {
+            background: linear-gradient(135deg, var(--bege) 40%, var(--marrom-claro) 100%);
+            color: var(--marrom-escuro);
+            transform: rotateY(180deg);
+            font-size: 1em;
+            line-height: 1.45;
+            padding-top: 17px;
+            overflow-y: auto;
+            word-break: break-word;
+        }
+        /* Responsividade */
+        
+        @media (max-width: 900px) {
+            .impactos-card-container {
+                gap: 18px;
+            }
+            .impacto-card {
+                width: 95vw;
+                max-width: 320px;
+                height: 160px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .impactos-card-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 11px;
+            }
+            .impacto-card {
+                width: 98vw;
+                max-width: 340px;
+                height: 155px;
+            }
+            .impacto-card-front h4 {
+                font-size: 1em;
+                margin-top: 4px;
+            }
+            .impacto-icon {
+                font-size: 1.7em;
+                min-height: 30px;
+            }
+            .impacto-card-front,
+            .impacto-card-back {
+                padding: 7px 5px;
+                font-size: .97em;
+            }
+        }
+        
+        .timeline-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 26px 32px;
+            margin: 36px auto 0 auto;
+            max-width: 820px;
+            position: relative;
+        }
+        
+        .timeline-grid::before {
+            content: "";
+            position: absolute;
+            top: 31px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--marrom-claro) 0%, var(--dourado) 50%, var(--marrom-claro) 100%);
+            z-index: 0;
+        }
+        
+        .timeline-item {
+            background: var(--bege);
+            border-radius: 14px;
+            box-shadow: 0 2px 8px #bfa26718;
+            min-width: 142px;
+            max-width: 180px;
+            width: 100%;
+            padding: 19px 13px 17px 13px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-top: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .timeline-dot {
+            width: 15px;
+            height: 15px;
+            background: var(--dourado);
+            border: 2px solid var(--marrom-claro);
+            border-radius: 50%;
+            margin: 0 auto 7px auto;
+            box-shadow: 0 1px 5px #bfa26744;
+            position: absolute;
+            top: -22px;
+            left: 0;
+            right: 0;
+        }
+        
+        .timeline-year {
+            font-family: var(--fonte-titulo);
+            font-weight: bold;
+            font-size: 1.07em;
+            color: var(--marrom-escuro);
+            margin-bottom: 7px;
+            letter-spacing: 1px;
+        }
+        
+        .timeline-desc {
+            font-size: 0.98em;
+            color: var(--marrom);
+            font-family: var(--fonte-texto);
+            line-height: 1.4;
+            word-break: break-word;
+        }
+        
+        @media (max-width: 900px) {
+            .timeline-grid {
+                gap: 18px 8px;
+                max-width: 98vw;
+            }
+            .timeline-item {
+                min-width: 170px;
+                max-width: 45vw;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .timeline-grid {
+                flex-direction: column;
+                gap: 14px 0;
+                align-items: center;
+            }
+            .timeline-item {
+                min-width: 0;
+                max-width: 97vw;
+                width: 98vw;
+                margin-top: 22px;
+                padding: 18px 7px 15px 7px;
+            }
+            .timeline-dot {
+                left: 0;
+                right: 0;
+            }
+            .timeline-year {
+                font-size: 1em;
+                margin-bottom: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Ciclo da Borracha no Brasil</h1>
+        <p>O esplendor e a crise de uma economia que transformou a AmazÃ´nia</p>
+    </header>
+
+    <nav>
+        <a href="#introducao">IntroduÃ§Ã£o</a>
+        <a href="#apogeu">Apogeu EconÃ´mico</a>
+        <a href="#impactos">Impactos Sociais</a>
+        <a href="#declinio">DeclÃ­nio</a>
+        <a href="#curiosidades">Curiosidades</a>
+        <a href="#linha-tempo">Linha do Tempo</a>
+        <a href="#grafico">GrÃ¡ficos</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#conclusao">ConclusÃ£o</a>
+        <a href="#referencias">ReferÃªncias</a>
+    </nav>
+
+    <main>
+        <section class="intro-block" id="introducao">
+            <div class="intro-info">
+                <span class="intro-icon">ğŸ“–</span>
+                <h2>INTRODUÃ‡ÃƒO</h2>
+                <p class="desc"><br>Entre 1850 e 1930, a AmazÃ´nia foi palco de uma das maiores transformaÃ§Ãµes econÃ´micas do Brasil: o Ciclo da Borracha.</p>
+                <p>
+                    O Ciclo da Borracha foi um perÃ­odo de intensa exploraÃ§Ã£o econÃ´mica da <strong>seringueira</strong> (Hevea brasiliensis), Ã¡rvore nativa da floresta amazÃ´nica. O lÃ¡tex extraÃ­do dela era exportado principalmente para a Europa e os Estados
+                    Unidos, abastecendo indÃºstrias que, com a RevoluÃ§Ã£o Industrial, exigiam cada vez mais borracha para pneus, correias, fios e diferentes produtos.
+                </p>
+                <p>
+                    Esse ciclo nÃ£o trouxe apenas riqueza: tambÃ©m promoveu grande fluxo migratÃ³rio, avanÃ§os urbanos e culturais, mas gerou desigualdade, violÃªncia e devastaÃ§Ã£o ambiental. Manaus e BelÃ©m tornaram-se sÃ­mbolos do luxo tropical, mas milhares de trabalhadores e
+                    povos indÃ­genas foram explorados duramente.
+                </p>
+                <p>
+                    ApÃ³s um auge espetacular, a regiÃ£o mergulhou em crise com a concorrÃªncia asiÃ¡tica, deixando marcas profundas que ainda hoje influenciam a histÃ³ria, a economia e a cultura do Norte do Brasil.
+                </p>
+            </div>
+            <aside class="aside-block">
+                <h3>Aspectos do Ciclo da Borracha</h3>
+                <ul>
+                    <li>
+                        <span class="icon" title="Riqueza e ostentaÃ§Ã£o">ğŸ’°</span>
+                        <div class="item-text">
+                            <span class="item-titulo">Riqueza e ostentaÃ§Ã£o:</span> Fortunas rÃ¡pidas, exportaÃ§Ãµes milionÃ¡rias e luxo para poucos.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon" title="TransformaÃ§Ã£o urbana">ğŸ™ï¸</span>
+                        <div class="item-text">
+                            <span class="item-titulo">TransformaÃ§Ã£o urbana:</span> Manaus e BelÃ©m ganharam teatros, luz elÃ©trica, bondes e arquitetura importada da Europa.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon" title="Impactos ambientais">ğŸŒ³</span>
+                        <div class="item-text">
+                            <span class="item-titulo">Impactos ambientais:</span> AvanÃ§o sobre florestas e territÃ³rios indÃ­genas, com extraÃ§Ã£o predatÃ³ria.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon" title="Trabalho exploratÃ³rio">ğŸ”—</span>
+                        <div class="item-text">
+                            <span class="item-titulo">Trabalho exploratÃ³rio:</span> Seringueiros em regime de dÃ­vida e isolamento, e indÃ­genas violentados ou escravizados.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon" title="IntegraÃ§Ã£o global">ğŸš¢</span>
+                        <div class="item-text">
+                            <span class="item-titulo">IntegraÃ§Ã£o global:</span> Produtos amazonenses chegavam a Londres, Paris e Nova York.
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+
+        <section id="apogeu">
+            <h2>Apogeu EconÃ´mico (1879-1912)</h2>
+            <div class="galeria">
+                <figure>
+                    <img src="https://ibcborrachas.com.br/wp-content/uploads/2017/04/Indian_rubber_gatherers_on_the_upper_Amazon_Brazil_LCCN2001705614.jpg" alt="Manaus no auge da borracha">
+                    <figcaption>Teatro Amazonas: sÃ­mbolo da riqueza do Ciclo da Borracha. Fonte: Biblioteca Nacional</figcaption>
+                </figure>
+            </div>
+            <p>
+                Entre o fim do sÃ©culo XIX e 1912, a AmazÃ´nia viveu uma fase de riqueza inÃ©dita. A borracha tornou-se o â€œouro brancoâ€ da floresta, alimentando indÃºstrias globais. Manaus foi chamada de â€œParis dos TrÃ³picosâ€: tinha energia elÃ©trica, bonde, jornal diÃ¡rio,
+                clubes de elite, cinema e o suntuoso Teatro Amazonas, inaugurado em 1896, importando mÃ¡rmore da ItÃ¡lia e lustres da FranÃ§a.
+            </p>
+            <p>
+                O sistema do <strong>aviamento</strong> dominava a economia: comerciantes financiavam a ida de trabalhadores (seringueiros) Ã  floresta, adiantando ferramentas e mantimentos â€” mas cobrando preÃ§os altos e criando dÃ­vidas impagÃ¡veis. A elite
+                amazÃ´nica desfilava em festas e importava modas da Europa, enquanto a maior parte da populaÃ§Ã£o vivia em condiÃ§Ãµes precÃ¡rias.
+            </p>
+            <p>
+                BelÃ©m tambÃ©m prosperou, integrando-se ao mercado internacional e recebendo imigrantes, produtos de luxo e grandes obras pÃºblicas, como o Mercado Ver-o-Peso.
+            </p>
+        </section>
+
+        <section id="impactos">
+            <section id="impactos">
+                <h2>Impactos Sociais, Humanos e Ambientais</h2>
+                <div class="impactos-card-container">
+                    <!-- Card 1 -->
+                    <div class="impacto-card" tabindex="0">
+                        <div class="impacto-card-inner">
+                            <div class="impacto-card-front">
+                                <span class="impacto-icon">ğŸ‘¨â€ğŸŒ¾</span>
+                                <h4>Trabalho dos<br>Seringueiros</h4>
+                            </div>
+                            <div class="impacto-card-back">
+                                <p>
+                                    Seringueiros, muitos vindos do Nordeste, enfrentavam jornadas exaustivas, doenÃ§as tropicais (malÃ¡ria, febre amarela), isolamento e dÃ­vidas que se acumulavam por geraÃ§Ãµes, alÃ©m de violÃªncia dos patrÃµes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="impacto-card" tabindex="0">
+                        <div class="impacto-card-inner">
+                            <div class="impacto-card-front">
+                                <span class="impacto-icon">ğŸ¹</span>
+                                <h4>Povos<br>IndÃ­genas</h4>
+                            </div>
+                            <div class="impacto-card-back">
+                                <p>
+                                    IndÃ­genas foram os mais afetados: expulsos de seus territÃ³rios, muitos foram escravizados ou exterminados por conflitos e epidemias trazidas pelos colonizadores. Milhares desapareceram neste perÃ­odo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="impacto-card" tabindex="0">
+                        <div class="impacto-card-inner">
+                            <div class="impacto-card-front">
+                                <span class="impacto-icon">ğŸ”¥</span>
+                                <h4>Impacto<br>Ambiental</h4>
+                            </div>
+                            <div class="impacto-card-back">
+                                <p>
+                                    Abertura de trilhas, queimadas, ocupaÃ§Ã£o desordenada e pressÃ£o sobre florestas e rios mudaram para sempre partes da AmazÃ´nia, causando perda de biodiversidade e degradaÃ§Ã£o ambiental.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="curiosidade">
+                    <strong>Curiosidade:</strong> Durante o ciclo, Manaus foi a primeira cidade brasileira a ter energia elÃ©trica e uma das primeiras do mundo a ter bondes elÃ©tricos!
+                </div>
+            </section>
+
+            <section id="declinio">
+                <h2>DeclÃ­nio e Colapso EconÃ´mico</h2>
+                <p>
+                    O ciclo entrou em decadÃªncia apÃ³s 1912, quando ingleses, de forma clandestina, levaram sementes de seringueira para oœı3Ñ‡yú/kAÜ¶ÈÕ€í§rÓçÉ¯E×‹K„cäíÜ9?j'.ˆ§VW–º"n`J9G£@Ššr=!=‹0°~Ryª³÷Õ^æ.U¥¶ ‘¸$~ÈKjr.oP¤d [qÂ»I…¾ª—Vvƒ1´-×êTMÚñÃ2¶…Å¿?0»|LÆ-ç¬p#iĞÄv<Çù˜°83C NÄÙDÇb£n}Şšzkúãd&ŸÙİ2 °h`İ³ª¾ Y6Æ:v˜Z¦``æès¤²©F=Ÿ<ôØ~4³\€Va³ÌãÂ?)¤3ÆàûËóàÜÓj˜obq ˆğ®ß[;øùèV³›jÛV´QŠ„äòSšÍö¬G“¸ÁÛg&lÚ$LWš¯GçÌx5~Òì|6¤¾xMpo\Ÿ¾û.áßµœâeú)6[Tquë@XÂ^X¨U»Lõİ®•Ş"mi·Hx)ƒ¶Ãœõvæ=á¼Ğ—LØv‘,1µØÕ:_Š‹{®(ÀqzÚäæõlÂ{‹+‘q²Â¢’‰zv¿K´–ß0ç€EGöw§&ê4t°¡HVTéöw¶T/DŒZ,qX$æÄuÿ%Æ†MìG‘‹**&Fë3"¯D|Càù#DE†2ñkí¡™`W!H_	Yn\û¸eZ1k£H84uBÁ¹.“P*mÉú˜¸ëC>Á`FŒBÕ¬ĞUã×G×pÁ#nÎ{É½‘2l6R‡F@©—ƒù\9³¡>%¥ßñ|+**êZél|YØ~½ÌœËm$‚ÕG½ûõ8¯‘¸"€×ÕîÄ}Şª;ıZ&ÏßÁ,5Aò8KMAXãÅº”É«ó_±¿2´8×ÔŠß.ÊZ~6¸Ü“§3C2É	ÑL#îjìM‘#¥Œ®|:&´#vd¥q¦Ô-¥q0VÜåRÔîg.•şÇ£š©¿áBJtßW©–‹¹DåËÏE:1­¨*<XvŠÅûÄÏ2>€n…JöKU§†èWõÃ²gxjÍTš¯L9…Áä-†'ÅÒ$x*F*ÜY;ßÁÊfx#­DX„‚Âãmfºà)R>ú
+şv¦ÓB‹ª×*âá˜A“‚³}îéú¼m$ÇõğµR&R6©–h›ó8™ÏB  yÉAš>K¨B[!°%T	@œ7ÿşŒ°-zdÜE3í>½øùVïå-m8à—ıÇkÛ{èÅÄ4Ş=NkF6eSi§éïÔ¥_c”ªª@7µ.GÌŒ…«&^(éTüîs³ô)î‡ù ²xMÚ	DeíhM$Ë\P        +^¤ø®|:-XÁ”§ÔgIş?Å¸?¬?ÓÛ•”h¹ÈY€<ú¯–Á€š§Äœ¼ö8âêpv¡<}TRŠéÊ“ãQ"øö©– kŠ_œjH¥ÕşÂHÃå´xÈ#‘‚í–¾ùÈğ)‘J·9—úOB’4İe\)†Œ¥ÉÁúˆæcZ±;EkJb›’LDÙ6f)=9ÃÌÅ$}ïµ]=š`(DaÈ¡K9²sYr	¬Dæ"Ø;Bq¶°#BJZ”u(ÏûÑ‡fô8µ²CÓâ·€· 71E†,o^wè" Ú•$©¥ sB½":6èI¨.ó÷‚~ÿûõ“#WÄ÷¬;
+“TdÁ7Ğ¿•ÇWŸ¸ÿz0õ9m{¨5ÀLNdãD&ÅÅ÷ññØr¨M±~U¾ˆ}²œIæcƒ°"dY29¥ÓşÈ]ÿa·IÅ—£MšÇ{èi›£×-¿m³º±ÙÕ*WÚfÚ'íD"\,¯…ÔÙa.!K‡üœEĞĞõªá;ĞJ5QgJ´YpıMse#ğı‘Qh+„«ÿ¤,yñÇÃ9šß5Å¦‘™/ï[Ç^Ú&×Šz×hÓTíÿs.mİÿó†°°ióS£Ç€VF5Ié/ÒhÜÓRMôÜ[Ç˜Š~—²â({V]\…ş§(éZBI3Äˆ6}ØøÛ¼ìm–Õ‰Ê¼~ÓcÕ¯üÚÎ^Ò¯9F,fL*Y-D(¶Ša|#ú	†Çê˜`xjÎô˜xz°.MA·Tqó¤És<ã…ìÊ\Ş~c ¹²š¬CØùxî±C™¢ëB›ö&qÓ ÷%ŠÄ=ñ1xòâ.½ºïŸ€Q“ï(Á‹}¾~Ô©£§dkˆæ˜ï;!n™¢dÇ;øìÒÂ	şlàLÊO€˜gæE³46/èÙˆãg$4Wf¼Ië/1Eb=¢OeûZ«=D=4`ò|µ¬aÆ$ToIÇÿí)SHCÒ¢ I|&/ú¸E<Ä»[UnÈ+H£qµÀÏw0;ä`~£`7ğ¸¯Çî…´2§¹˜7„HçîuËº>"Zâª}——k“oÌ3»MD’JÊS-½°ÜÄ¤7VÇ*`nM“µò·å‘Tqª¬@¤áqo…W~%“ÉKçìdÒ=E¯d]¶[˜É9Z…P	İXú
+L¬‚ ”ÑJáŠ;ü…qÑÕ@°£®şÄ_²õxIb¦öøô(ë÷m|‘]ÚV—CL=ß-(ÌÇÖ~Úˆ5èZ¦¡İÁ®~doß»×“Ü†2+$àœ»áÏ$:PXïµñp(»5@mĞ2H`­<îú½#}Î¹W“È¼[ 
+›i»¾Bèr3Lœ;
+J6¨3iÖ ¯	$ÉaDXéVûgê·õë&­/ı#ĞFî ×\Kü€c’§mËÆ)§õÆ‘È ›”Æ&:°“m´ÙQÀkTÔY§TÑQåš.ÎªDšL•œ:É;VNÖÌ¾@á*P$Æ\qõsÒé¬á}côC¹ÜNójjn$>zşÀHÿ)9({+T*hhcÆİ°«P"ÊÛöš¦àEfV‘âü±¯m“rq›\æÑœ¥Iè“è›9¸TÀBj{õsÃ®¡xÏ[¥Ÿÿ†e™82kZ©u’‘î90µ<œŸ#S^YÇÌgŸİÌxMï-¦ià*zg¨¨(q”ª œZäX{rEÏ¯j6>)â#ë¸¤I]äeÒõêÖíšíu·q:Eª@8­hïs3uÜ6·‚‹YÃáL¿8ÂşœoÙÆUy5ÇCÈ¿¦Æ[d­H"vóÛwè²zt©£ÂEé>ü¤†‘hLd_Ó£Üû¶ml,»}ç£ov§QÁÅÇRµ~‹“[ =…¢ÀÒ_\“»–^eÃäÁq++p¾w©¤„şI¾Öè©ÙÉD…Î9ã]¸"øqTw ~G+B1Váùb}­S€-wv ×Øcha³]4š¡¤P74Ì‹#JPáù¶Åo†µu+Û³ĞJÜ½Ç½ºxÅ7 t•Û½\Ù*Û.éÌMğ¼}ğvobŸ¬“4Ñ‡îû/Ye#§f6oœï±mu„}øÁ4Áè„=à½êµñ%Ä<ã}É¨Ö–
+1-¾KùRúşõkVU›É/‚}Ğ{4ğ˜U/@±÷â£$ƒvš=ë€‘€(DT)K‹'³{à£$bA”YN5z¦?ä²²vv7v•PnîÆJE´pšŒî—ÚòÎ=Îı¨îÅÄ;JÏ€9¬QÂ|ÿ¢n‹*Ã¨TèàQµG~²Ã]ñ;`v'O'à]¸”«Q¡G„º‰¾÷eÅ²¤fà“IkÇ~Úó£	ĞÄ÷Ù,Â¯ù‚ÿ˜Y˜Ùu!Sü4)y³"×ˆíúGÙ……EÌJ¶©š°½ÓúàClMAşøFûÏp3Ûíe=ƒíù¶sÚÏ¨Éfdó'ö'Œ
+º¦»Hş‚BÑæ3èè«Ö½RZ‡¡…<d¦»œël,Å?Yy†{@2+“æ1šu«âîè/Ÿ€7{Eîß>ì°Ù…Ë¦9À»gvº˜U¬ÉDóÕnÆ>´lFaé5Ï^õ8?ipŒ©÷Q§xÄÛšD–¶»`9=4x~ñ‹)ò%d„óŠÎ‰Õ@ˆ³?˜M2š…dAµÙ|g…ü5ˆòI_÷ùDº­NÃİ£Û	¼«”MØGÍà/çŒ¹„“0Ö¬2T%QâŠ”K¥ö81Æ¬°>í‡ıN¯KF+(ÈJ¥¿éìBÿ{]dK øcYU}œy¹4SbŸš´ej*ÜÓ|µ£A¶ËæàòS<›SbH«ÆíğS™:O<4ÒÖL7ÛZÿúÁAÑA:sZ”ıÁmÑpà—î_&gû!`ÆşÆ„ùóƒ<ÄøÙ®>é÷#Po<'[¯KN‹ôÆ ªºšJ­Õ¬A‘ènx˜´ˆº®¥IëP«šìuû›¼&±ø…‘ûµ†2‡:ÑİËĞyX¤	wåı??Á¼ßşeŠ0Ø_yıº_VVÚôŸÓ¬ö¬Jò7mTO¶Åü8])ÈŒ# ãC‹Ûr—|Í[İŠ ©12ùÚB2Xs‘ÓÈ»=Mˆg.nö+Ó'=XÛê%æO®:BÌêoúêöÇ:-ŞÒ&‡ÌÖWÍ$ÉÏ•ğ`ÜğıWtÑVTØö±
+`±Ü2'9QSößîäBL¤p(‹½‡:ãmÑšğ–Løå ¡û÷'WPÒZ)I¥AùÍjé<¨çÚuG+X¸ÓŸ`ê|[ˆ`’)%Ûıš„ZùáßjÏ/V×ùü›«¾5;~¶«æV0˜Ö‡Èç—ëe²ÕÅÉˆÊ”ÆØk¾İ›7]øPÁPŒóæaÚ9çvÂä1Ò:L/	ÒÛÈ=¿ã ¿Øj1¡T“”;.g÷}VMG¹ŞX®Š;0^Õ} 9Ø&Ysà¡ùEÛû ÷ø4Êô1O²ğBIAJ‚½„\1
+NXwSdzÿ´µl)ì¼ÆÑq¥:yu$^ZKÂš;R+ÍÑ÷ô(¡°Lv™^wTùìú¶_‡~Î`]İäuqÀ³iLKÌNââ‰UüŞ£õÃ{mnbF¤EˆÛË>ü\$ú2öŠWw£v‘Õÿˆì×%³=Ov5üÚ‚“»!­XÂ¾õ4ŒÌd;!x~8ó—ëœ’@J>ó›wUc°\õ÷2^!_Æ#<áäØğÓÆ‰^×‡fA`xtTÕ6_Zmó­>¬):D~Á‚„#ºİ0/v„¡4"Qª>atpÖX–¶ ^8œ°#©D.ËìĞò»V¤íNzØuPÑ¸áZİT»jçB‚¢~4ä¤)qøg0A9ÆÀXb–2…,½-:K¿ÏPÓŞD‘¼/'
+µœÃM´«WízZÿ{\ˆ+Ú˜çrWƒ‡ø=FÊqşp” µÛÍqİN’t¡º”/A²Œ&eÿ©í,c¨^­ƒàxİ+¬~ÅD'ŸÃø©k÷t—Ÿb{>Vß#¼ö±„ÉbœI>¬@êº€L5oÿm[çå*™¬v,[‰¥Àå§(ùĞÔÂa=³ÛNµs
+äk¯¯L3ÆÅd‚ó)ÚÜª@÷{T–Öyùûñ[ suYj¢‹z4Eš®…n´cÌì8:Ã™9À¼?Æ oSá¹¼nÚ/Òp‰¹¼8ˆÆÄ{yQ×"|(Š¨PW%W8÷4ö×F! ÂŞSµ{1Í®·;'T”OF£É[ó'ëd Ò9S†Ì‘5(åEXÆvÉ•cÑ&»¦nB¬èï^%ø¬¸>÷³f”…XÌñ[»5åş0oÈ™W/NÀGUMq0i­ôÁöb5¢ËYã¦°Š‚•
+Å5åÎ¨ôHÍ¦îõ…K²>år`Js¹†”öĞÍÃKT6ø/&^Ğ……@ÿÀBÅ¬*«áTÕõ?ğz¯Æ}8zÏû—2¥§‡Dê3ƒÁg^a!R¶’ÄO”—µÙ®ói„ÿ,êK(0B à¨tù¯©ë9¤ƒNñúòJ]†dH0’ÙÚ+º”ã‚‡’e‰E§\1¾MnNNQ/mÔš[Vˆ¨¯dNÀĞ¯>9;·?{Ÿæ¡½«aâ¿İXœ?ïdŸÓÈwÙh$ J2±»-1Œ¶§-?C_¥EYš¹¥ÑŒ·›ø<“Ÿf¸Õg¿ì©.%jcµÆGøªûì[]³ğåHÏ3³(M¡>‚ÀÅ1c@Šá¸’…8‰ûPG!H4_‡f’JìzXPŠcDeñM}r/B©¬½œe®:ØülŠgY¥¥AšUW½™–`V`Ky<,®SÑJ›R:¸~VplŒä;_ü<E‘è¶ÄÂ,³qƒLñO_eAß–ÏËYx»ŒĞŒp”ºìíc‹{fÇíªÒò%E—îÊfëØ°Œ#òĞ‰â ßçèM{ıë&>˜cdé‡*úvèıÕVÜ(H’üX;0& Â”ÒNñqáÔşh/îA3ÔäŸ¢L2s¨% n­£§†ô5¡ñÏ(N]ÊØÄk-=É¹Õ7¦“ğ(·eNØ„¼©
+ğ³£HWÂùˆ
+Rt™&SÈ¶¡O>kÈáˆiÅO}ØÂ²³´"| x$w€bNÙù î ¬hr.zåòÉà§µİQ¦Ÿ:f_?k¹h^-¥€+7»N+Eÿfâğ$ »Ì=7®“ãñÅ5œuDkVT¹Nı[Ìx5:cŠ¾9K‰0 ®ı]Óu©0,­#œ=4ÓDñø&qG¹¨ÓU‡÷º®­Yˆl¾·B"©I
+Ÿôg·ìÁÑM À£_¯ë>LS µaä×…ã+°ÌÔB@õ— ó« ç¨z·8¤Ç³Œ	xÉJœl×ø<«ç‚àŒx„$YIÇQd>¥·&)ä}rç©ôÔØ“6‡¿!–¸çÖºæ—¯êİVâg/ºVQMšÎ€$A!.Âs?éAfæ‘]wNiäÄ»ÿG¥{¢F{Nš&¦,y4/*ıoWÚQ¡Ó/dô1ó,”‹ÓÙfÅ!£4Ğ`¢ñYõ¿Jíja ¿É+ÈZSÎûÑMûHò@]ÏìX”YT°ëísB€İ ıàŞfË%=¤†³l±"5åèÌ2—Ûñ¦cä&Ó½·ÄÓ—¾8Ò"¼WD—ûµfá\e@ı·¤ÌTˆl˜£7}i5‰…[Ÿ¸'<ò ;ö0bj¬»«,+=ÿ*ç›´ÁæAç¤ú­š8µ= ™|bAŒ|ÀFğMÔ1C¢†E¬•`Çƒ×y»ŞQÎ„IÜ¸ú<°Î¦šûdHœ*šú™ùN³Û˜ú„¿ÙşÂ.F¯am´!œ>nõÜgo†É70Tºiü†èŞ.Ïqƒ¿öÙŞ‘c–ñáŞß‘ø©~:Ğ•ıÓõ!ÛÕ]2¼l WZ‡G]åa¾š-«^HM‹FÏû—£o$ƒ["`Cá9†uµ®wJ¹©På&‰Ê|Ø¿ñÎhÎ*lT“oåú?m |ÔÇcÜæüêI;{sLb¬LØß(œLµå3úzŠè}V½RTQÄ»^/ÈÀ\OšèCm­X™=Mõ¼–cN-‰èØ1?iÅšÏÀÁ·]äe¸”¶®ûSªv›1jLEàóRáùù²È¯â§'0Mk{hGc^[‡XŸ­Ú]A–º’7Ía®uxõEÆWIÓ8‡VÖ0³‹yCOÇ›fA={§ŸÇÊp2¯Ø•-"ˆ5ñp2A=b»[Zh<Á”gh®&Â¥øş’ÁÂU‘XÜãÇ%¶³é¨ÿqEÎUáÜ¤¿Ì‘Íä³1I%GğPª×«ÙyhÒn¸Sü³’löéÖ”¨¿;{½_¥’Ş?HÎõh2	`ë ÉxÿáÚÃv§‘8^©€â<.ßÀ_ÂÃ,¸
+©€6'¼IdiŠ±Ã–¶‘…öë~pÑ„[¸ùó<ÚéËËT¿óµ^`´¿¡°ßWj—ñŠ¨Ê--¾º¶)1M	°.LW8*arJ‘2¿¼©.hâ‚ŠïÔá€ÔÀ¥»ßç#}¥.–ÉÔVM.>!€&X;*K
+˜óªœ‡ó·'^6íLËô¢ˆ¹òÓ%ÀjºÀÖö¨È"óÃO·i·b:P62õ.ß`¶Ëì¯	ÂIGÛ“Šå~®c4kN¯ë—@mŞæ£pN!úù‹™5ã¼ÙÙ–˜š¼–ù€4i-L?Ôn™Àè¬gY_@Ğ˜RóÃf²ª5s`şYš’³³z¢3/Óù"=g#ò lÚ~K“ ûç9ƒ°qtüx.SÇÑLFàMDÍúKİ}°â‘[R÷Õ|åS”Vt@H9ñDs$ìyE~ºc(Plå¡GâŸ§i4‘MçÚvÒ.7EÄüŸNˆg»Ö íCü.3üt: İÉ"^†„/õgAWÖû™ÃÁÑvœcóx“ëJêø«|q{Ó”DdÚ†f‡|qœ¼á¿°«ãY“˜MW	Î_×`™ÚˆUDÈ%JÄe'{Önqgëø:y2I± ­C¤-™0H$ÇÒÀîÔœ÷ h§îø‘Òc¼XOº÷½-a00v‰
+Ùk´ÿl^÷Í¬«Wƒ‡	¤(±“®æyG¨÷“1R£¸1şÄïòóßáÏ{/ñÔ§K A¥B‹tÅ«Ğ³põÓà03¨„ıxÈÔËğO€ëüŒE«z×ÉAq¥×v*ÿï”JÃP]‹©º@øaë&‡{<nB`­sUPàb
+“ªã1ÔÈR[šñFš‹ÓVú»û„Ûô,dkÖÑcû·>ï„şÅáÇ=w,¿<S)4áwj¶nd~Y÷­ØùÅf2P±ğ×4P	«¨t¾D«,0¨¼µĞ«E”V))\œ“Í.A¿dÉÖùz¥ĞrN=­ù¾êÔÃŒzáØÁ-œqèšÑ\J}Aıã„èûY–à»^èw»>àå}‡8Í{±³³”>î>¦BãšûìÃ¼û{•zç °L3^›ÒoÄ"³_»¯+ÏB½^)…h7ÀŠfNÑŒ¼Œ²•bÕÎ8ø×9|8v6´{jc¡L‰,òˆOŸ*­„áÔ„Ãx@æš}7\nz§ ö“P–7/‚Qgõm/¾#[ô9¡)0áw:˜ÜÒÜT­¬Òe'„{ÔĞ+RaÒx³l„–X;z/{<®â'~m{ûHx.!à±Bßì¸N¡è=
+²Í>|f©°1øUã´jfÇí"4ù:W@e¿…ĞB—l3ĞÎŠ«^ß¦qPƒ¡ÎÌXï[Ñ´/Ü?Î—=¾H ¶kËŞˆ`‡¬~Á¾Æ˜Š#5Ë¼
+[/XŒ%½lèáınÃ;:(Lú%à+$˜?•èBõ^×š.è
+­qƒ$:$¡áÚ'
+î²¬>B“]şK¦‚ÁÒ?ç»])~Ö¿•$ˆõŒİ‹ü¸µ¢@=/2œlÖTqh™Úµş© ·®ÕKŞ–šz_OQ$Tšğ	Ü®ûZ'²Òy—#á†ãšÔU|Ä”0ÕÜrĞápÀ\	XcÉE$üÌø“Ñî½“¯•±u:9ñïõ]9ÊúBáoaKÒ*DÜ9ÂÖmµ­²êºÍØ Û{ÒšXí¦ÇÔ%ä7üÅxğ~¾r¶JüTç‹€*ûäñAá¼&?
+b ’èÃk"FèNr§ˆw’%¼7
+zdP5¾”ÎP~’åÕ“YÉ´rıËc³šûÎ\BüY„#õ»¦U8ckW•´„­§±W‚úª(RRòáé”ğ¬Š¦Ø²p‘Qì÷©’Ğ”ÿØ½ŒTş3¿í†ùšşeL¸‹¬ñ
+7úÆ¬ NZmª"×D±ZgİÊO9ü9(Ó¾•éh@À°¼²ç€ û²ÅH=XV§ÅdÈ^övlã¸Íçç±Io¡\h Œ]YâÚÆ¬ Ñ©ˆcFÚf4û]<Ut¿_êºğµˆñ:oÑBA2m•:«TÑ¹œX°$Ô<Òf%v^ÂÑIÌ íÓtäåòƒ6´6réª›¿×<Eo‰æ+[4•Ûò?5@ÕE‘Ğ,BB‹gdA4¯œè¼óË™| :6ß‘ì<'  Oû5¼dY[œr•…~*TTÛàæsÆ^fŸR]á%:øÓiûöhÖ°ßSc2ïU9‘º7ÿ@á	Ó¿0“Ñğ²
+?Æø´!bOÒ°'c'f®Sœ@Ø“D°<M±Éû³ğgüÑ³T†&·²>O–!‰Âáöa(°d&WüAbB
+lXÚĞ}×M‡ø›Oo§»^[“¯Y²ÕµG‚7Í}”¦WˆFÑ•³æ|Å–ÜmUvh†OÎ™8™Ât%ch¡Ì.~ ‰j<£åº3úh™eOœÌù nV:}}TÈÅ
+³¿9ˆWh4:šÍßn(ê¾G­Ùâ€³şL¿ ÏYJëi‰Ó[/wiæñûî×UlØ(é¥şT0*a+ŞC›Ó[Ö]|â:Ù†§Ê¦ÿW¹ä,ğVKÄÙÛKr	Nß0â¼…Õ¹â¿ÕÇ¹€ v@ÒVÚŠ‹®^##ìÚzMßÉÀÈ7!ítÑ®Á¹İwIî½Î8ø‚Y±É]æÇ	;h
+š¼VÍÊIêÑ±¿"Õ.-³mìqÑêv€ŒWšÒÌªÛ¦VsÜ'\t[šKpÇ8º-2C/½ Ğ	ãØq>¶¨Y‘)ç4—†ärIöNvÖ%Z¥wDşîV­q2ØG®1šİ3Qp5uŠÈ·lHR	uıó…å©øƒ[ïÀ]ss}øÕNÄ¢’rtÁÙëP&MoóáƒU~@kˆ©«({†¸Ihn:tÒWTÚa§TAËÿdŸ R5[Y	õ›µŠ¬™t²Túœ¢¿Ò<¸€*Å9^Lğ,ºlNÊ5s(×kè°¯¥GŸHs6Í\ H…}\şĞ$X:ÿT†ÿS„ôûMT½hÀzL”If€ô¾†úÔua_å‘²9ğ‹f¸£ŠËøÿà;x°\ à=HrÏèÖG~AÈşñM¯ìÑy˜sÎÃt¹…nŞ(æèAåë÷Êo?ëİ4w¥ò03MÅéiäùŒ‚®^ËLO)³‰£İÕjjä"å{£Ñxº¦flò­©*ƒ?m?wTæzŸ`¯p”SBn¥Ë„ëVÌ±~°Ş#õY`à´#8œÈ¶¡õ~xºÓ)®ÿ)ÿ¤œ7®õcÒõrî‡Ò)úwEÎê”+
+aYÊ×ÀÖ1ømú;¾.µº4ÔÈ5,&N —¤<Í4|W;Vf.›®åóuç¦Š¢D%xÉĞå€“;ù]…æ{ÒD«+7ÿîşè:T6@‹Õæ¤9†ˆ™AqÒ—K*¼OĞ>R_9£‡òÆ§!W{Xíš¶Ğ"‹f[Ñ0Cnt({³/<'\;Óq1&ãœ[ñ`¢ôìå5HÇ£¹2n~ûcÿÁO1]‘Å¬ÙW‚-ˆ¨m#'yYGjwv&Ó?Gçüß[9¼›2Tå²Ï ÷ÎÓA8wîIŞY«ÓrÌlZš‡[t·ÈC‹?ÂYîX[ĞŒÀ—ŞO6˜Ş)ÉLíúÚËÉ]g¸Gu6g[$+¸Lêek¶n!™­J`0É8¦ÌŒLI®ÖÁk“fQî”oµ¡KMÿ2%®Ëú¸—€!/êèá£ÄıÿVC:	Ÿ½HNm={ô,¹¯‰‡0ìz'|®W«
+ŠÓ—Ñõbo=yıƒ
+Üâà1Z¯ûUQÚVûè*Cì±XïGÖxü!–ª;K©{GõeìªºŞ$Ç»š­ê¢©q½ Çë'¢¼>JÛv(¬Ã¢©ïtšfvG#õwJ¯ÓÃÚ37ôÊ’Tv‡mÌEåÎ€l&÷/cŸ›c~‚I’­G…¢—Å7ƒ$#ç„Í{‘­wM—ßv¹ÒûòFòMM¤øÛÖ†„x›²º½ôGANj.£ûß¶×øÿ¥ä?õh`VÁYŸ!Ì˜NyÉ.ßä-ELIğŒèW=¨v”~wà
+ãÉ±I›Rg¢ˆRH%3r…r~Ä¸IÚ¿¯0ú‹j+9¶J½¬&®‚hĞ&Ûğ;´Ã¤3ÉÙzÑ'•ÆÀMú3ŒŞŠZYòŸòzşFê¡#2¦îzèxŞ}ağñâ’ıjPÇòºš÷…J4\†¡«¹ ºÓq*xÀ2+Á”é\ax4£Îğ9H¿‰›kı‡ÿ)8_ÜbŸ8l#ºeÀ|-Ç«E@–p)…6büÎÍó2!¡€èyí~ÜËm9ÿbdiÖ¹Nñ
+Ş¼ÄXOï-fäµcšÅÿ×R¥Õì¥éÖu±ÒbÓøi—•¸#Æœâ*J”˜ „`AåˆÛ!hTïÃÿş¿IAfıåøÜ¥° ÿ)šñÜ ßGUc±W­­+
+c§O£îÊ”/³ˆnÑì¬î÷•úMÍ¹NÀ.À[»â™£¹O+ĞB‡É–zŠ	´a¿!Ã<_8d1x+.MeI2$T»©KAÖûs›ºj´¾ÍšH‡"°Ÿ¿7aF{¡k„ˆô5tşÓ.ƒEoØDÛL¶ÛÍËrcáBBnã2XYÃ¼î9ô´mÜÄ0YbıÌU©8
+†mª?w±ê‘4#oTgÄ{±N>Ä@¦	P`kØ¤Ê—6¥Üƒé×ûwÄÌlµœuÒÍW
+œd»Ô1¿÷àï56%?­Ÿ™ÉÈ67P†êëuM/(%l!{¾‰ËaNG¿v
+ƒÑàÑ´0Vk?`×”zP*9Ÿh v-ü*stûÄY~d2è¥R…@N*ÆCfFA
+–)æ´…Q[ŠJyÍc*2EsXog±r¶¢c_ÌE]ÿ«bÂ¸¢sKv05Y3³óY±5çtáÓà“áÜ	xĞKÈ2J‹zÙ­n50•ÂA©tÌØ·bVÂõ1T©mÒDê2Œ³-âêÿŞÖ—Ûùc"ä»IïĞ²:êMºêpzÎı!¥K¼–“9ôÖE*®R²hÈÍ¼ìÂ™»kÃ\&º# 	¶hÊxx§)¬oÆœ]?-O¶4o¨éÇ]Š€Œ¡Âuîù÷‚l£¼‘ŠŒB'ÏÓVÙ±"oÄaƒª+¯ìì,½«(¬{‡‡$k{µ#xŞFõqEº|ñËöƒû],d3¬òÿ·ÁÃ£ƒàSc=×æ/ªî€â»Axu»2Š	YôÊwkÕ³ Iíã¼V´—ôÃ†œ“Kûf1ìşÁÊ¯ƒÒ$ÑÁp'¨—I¯ÛkÚ™¤¼ŒÖ1>#oh70¸Äb¦B.yŒÄN"x+öç,$å-f¢©±ÅD–ÇÅ±'¾oñ{²JX´“È"Vş…Œ€¯·§—½”ç´Â»ï¶$/cÀ#åxHÕRğa©:óDù]BäLŠ]ıä¼YEX)9Lš¬êLYJØúÈfÅˆtõàŞÙ ôbİå‰Ôòt„õc1•‘7&„ –cøÏj’s˜·sCğ ±›öñ¨Fb£î•b:ì¡>P
+˜[F?D—ÖkİC"é„Úgåõîì¯([1ÓÆ„wwGêôˆ/4O¦!¸¯ƒıôFóhjíäÉh×à	şXÊ>lœ5ã¶?¸Ødì¾›5…§ àiÆò›÷`ãT:0ÃÃH„)7œ'àZ×¨©Vá>I_ıö.œ>[_iÈbJ„ôÌj·+>ç&oÆJø~6@ïWU¿hèRª6ÁõGèÀ×_(¹­«^–#tPDØWıvIR	·HÊô•9à*ÆæÂ›ğÖS¼«†ªyxÎ(ú“ÁW¯‰5kÓº6š¿ÉD­D¤Äè÷ÃÓñ5øz›\¾>‰òü®‘«/#ü:"âÒÂVò·Œ{ûÙ—âË±3™¢æ¸4	«¬·àóGM¸§‹+ÅG„‡oãS^˜ğ+F0Ö¢iu‹Zğ	¥òøÊuøB-¯Ow¨kq$sÅD—ÃÄÔ	ómg}·&¡Pà7%#ÿwZ”ÙË"­‡ÊxzÓ
+ÿ‡Àñ!2õ;İç^ô*ßDçäM
+s°¦üı…>¬, ºÁ=×¼f3×ï Dtı}ß;pjš/ãÍXÈÍ¦[dĞ9¾8e$q.xQS~É7IŞÒ$ªæ…`w‡&ÏVÑ^8¢‹¡¶áÆÏ.‘‘ÔÈÍ"‹ƒèÇ^¡2&­CÁÓ_
+©HRšbbÖ
+{!+ˆZ6\KgdÕoo»@²÷{¦ıˆ÷•Î£­Ğ¼Ãã'ŞO»ğnú¾/+˜Q%áN™39¼7æIÕXnòr)< PsìQ¤Ò¡-:½EğşôÚR¢ùÙ¬G×*cíãšÍ¸-B7g‰ñö¦pÀ)é½JõS–ª$4j€ó¬ŠIìYàëß@€»·èÃ§Ü	‹ç“ØÚ’õ­3ïZO)¿DÖ™?£Ú(òãyIÎÌ£>j£GÊÿËóf(ÆlŸG0p¯”svò:˜¡³àÉ%àx§ ›ŸË|"¢èóŞ\ìm×ßs~ÈğÍ4/?zŠ@üéÈˆ*‘“_¾-3Q†Í"W>gÓëÃ´è²Ç­Xf?É)k\ìa	ûCH`àT–oÚóB;C}ğå9Ë^êŸ¡H ã@uü3nóñ5Ttñ!ğGiZDºß]væ_
+)p“HíÀä‚ùsôMVHjöXûu3¨J~Î×V²Ğlm=Ù'Ûn$8®;µB´iª%gEşqn9‡ÛÛMt­nyı»<O§¶>4çŸ÷FÈt7;ƒˆ.ğ÷›Â”1W ÜJ¬ö÷¨êîüs5!®‰‘—¡kÖ§“‘Æ‘òT[PÏ1ï5\Áí¸<‘øzšÑüBpÜÚ)IîL·jëZure³÷ã!ÑìÀµf%VUœv¶ŒŸ{¼r©(ˆ¨–v10
+mª|H×=Ç9ÔÈCı9e¬á`ª”©Œáƒ©ğ‰ÀÏö°o!ÂyoG 9ÛMöÉ2:Fß‘¦ÏŠaüÈqÎ L?v”«ºÀaÿ}wT†xâkn¿Z³¹«º	po–=ˆ%ÕÜêOÜ1ü§è+ˆu×§<AÙÙB¿0|¬Gg •Êš¸ßÏl# ßÇÓt`Åı7Ñxv«W”ı0&~Q}WpTÛŠ½ê„î–ªqæTšÌ”eäV,ü»‘
+Ú8ñ>>µâ½«Èò“Ëquó@€CÒ®,8»Ë}Ó÷‘õŠ=ñ'\ºKûD£@á<nuˆo‡çX¦æÏ’ñ?îY×8%¼»·"28|jÓ~MjşiõtZRİ…Şÿ®ú«â8İ‰“‡âm/A€" Œ%îe˜a5cÖ+h¿ê‘µ+
+Ó‘Mi’Q¿]AlÙ˜-1Á¬Ğ9tæºl
+ •Şştÿg‰¢7¢–àšò{ùªV^ªÿ0Y>2†±ù²¯DmbM;C
+ØzMÛo¢–à —½ƒ¼Æ7AIGÈbw—Uvür	Ü¶íÖŸß‹sÀeòÂMr²µŞr¼Î.ÔØEM"CÅX&®_ù0rUÅõ]Mç$|»Á€¾¸t-ã7E±®@<••
+‘;†H:#h¹rKÙİÙ˜´MÛ0TL,AØy´Æ£€% ©E}”s+ÂwKŠ~bV:ğ"¿—LuÄç5å·áòg1¦ó"Ğñ)˜ó¸U›®ì‚ìÛİœöÚsº¡šÒŠ¡­J:Øœ¿%MBhå6…t¬Èğ9Û™‘ãuï/<=—S)¨©f˜ƒ&®)m¿-9#'wß<OI¸-·ÜÔ¾JLVÕºá<GßÒ »ö3Á¸ÿÉ¾­íS	Ï¤Tû)çOH¤Õ>‚ˆxiú®´[rÌäËÿ™=^.ô‡Ô¿¶­õEÜy£)à­s g	µÖWÊl	i°g$—]è—H<¢›H¹xòˆï>•,;m×_IË·è“‡BÌgÃ:MC÷ãnbá’£êõæ)7s¨ÂŞ˜/aùÛkà_[×-pÎÊgï©âwø`KM”_;k/—hòö¾Íğ“R? ,:Š	#¥³…â$B„ŞÜum,Ëş˜jªr¥&Lß"A›¤ã÷óØ¶ØK^ "|/†9N›gêAHe€ª©Úêxõ¼q4SVp%x|‘¯­§ÆFÈ°¶’pÂõ%ŸàoìÁbìÎíº*´Ìè1ĞşcÕ0"ı%äÎe„v½¡tF&–ıÉ.’ñ7”nE Ö¹?mÜ3ûY7t¯¸—bsÚç¼kRhùTl[§0ç{s]¤%v”HK$‹õöÁy³i÷‹¡èG­=TŸÈ0®7	>âÓ+ØApqwVAò~$¹ŞrãÍ[ÀxFR†pìä¢$lº;/Î=ÖgJ\³|Í˜ì£âŒÒDãç¤&à£®H¯ªø9køàHùH@dÓüÊ³	#™5$G¾|«(pÖ¢ws?{?) æJ«ş­³¾z¶5ı_V¼Nk1æ	ÃZâ1>¯ç“¯~ÑóáËìØ `Rx¦[¢RÚÓe×Ø”1zåÓhN>!h^($¾ÉÍfqŠ®¡'–ÿ¥Ñ¦2œ0HÇ€v¤ïÃvÎòÉò7Nç„TYrÉ'.°H»Ì}\Ù½mÎÖ!&ÉQŞú±0¦². ƒ3êİÖÇècì³¼!¾Õày
+oa»­'÷êıúIDÜøÄzÂÅ†›AË*yù¦³¸ˆH1ÃR°ªì«´œº ’Û!Eåœ™'D)•8zµ„©bú®üj¥8_ÎÓÇ iØàbN>·Ç«+úG_®Â‰ú·¾ém
+Dó˜œw²‚gº2nM4<ŸbCíZÑ‹Í¥åıLE_T’Fú3•Rª?¢±„àÛ
+ZÔºˆ€nwo%Ï5*-’ÌÊ5™„ãíÂ´zFt&ïì\Æı˜k™şjr´S¾î¹üUKæ+È @1õSÁp©­EQHÃ„k‡u*VRU4ËƒhğÚÌv';!œ\¦÷¼Z«„Šò‡Â¿Œşv®ÜñïÔFS@©Ò®ªù÷«'I}T|a2-0;õë!s<ó¿ôÏĞd\uËÑŞ)O@ª&+|CÆ¶j{ğwôîZ14ë²ûÎ"Â‰Òz’}ôŠÁm'§?§%¢
+ »{o¤Fo=VÌ,f"Kìú]¯çï–KºÔpõlë¯f6¤ J©ö:‡Ñ¡8=£u’±qö¬ÿŒ=XÉAÜd"a–‡' JÍC©o…±¥çz}ÿÒ•¿VÚä×òh2„¨-ú:å~»ş¼»È+j`Evµß‹L+/XÀÔëÀëtâéÜ¿—•h¶»®oÑ¤äF'şşîJ†rÕFM¡®µ­m>`£3`Ë5uÚØ4²"w

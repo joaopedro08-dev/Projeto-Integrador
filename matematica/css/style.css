@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --cor-laranja-escuro: #D66213;
+    --cor-laranja-medio: #E57D1F;
+    --cor-laranja-claro: #FFE0B2;
+    --cor-amarelo-suave: #F9C75D;
+    --cor-branco: #FFFFFF;
+}
+
+.header {
+    background-color: var(--cor-laranja-escuro);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 2rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.header h3 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+.nav {
+    background-color: var(--cor-laranja-medio);
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--cor-amarelo-suave);
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--cor-branco);
+}
+
+.content {
+    margin-bottom: 2rem;
+    background-color: var(--cor-laranja-claro);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.text-section h2 {
+    color: var(--cor-laranja-escuro);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.text-section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.text-section ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.text-section code {
+    background-color: var(--cor-branco);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: var(--cor-laranja-escuro);
+    font-weight: 500;
+}
+
+.calculator {
+    background-color: var(--cor-branco);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: 1px solid var(--cor-laranja-medio);
+}
+
+.calculator input,
+.calculator select,
+.calculator button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid var(--cor-laranja-claro);
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.calculator button {
+    background-color: var(--cor-laranja-escuro);
+    color: var(--cor-branco);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.calculator button:hover {
+    background-color: var(--cor-laranja-medio);
+}
+
+#result {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--cor-laranja-escuro);
+}
+
+.quiz {
+    background-color: var(--cor-branco);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: 1px solid var(--cor-laranja-medio);
+}
+
+.quiz p {
+    color: #333;
+}
+
+.quiz input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.quiz button {
+    background-color: var(--cor-laranja-escuro);
+    color: var(--cor-branco);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.quiz button:hover {
+    background-color: var(--cor-laranja-medio);
+}
+
+.card {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-laranja-claro);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.card i {
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: var(--cor-laranja-medio);
+    color: var(--cor-branco);
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--cor-laranja-escuro);
+    font-weight: 600;
+}
+
+.card-content p {
+    color: #333;
+}
+
+.card-content a {
+    color: var(--cor-laranja-escuro);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card-content a:hover {
+    color: var(--cor-laranja-medio);
+}
+
+.image-gallery img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.image-gallery figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+.footer {
+    background-color: var(--cor-laranja-escuro);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    .nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    .calculator,
+    .quiz {
+        padding: 1rem;
+    }
+    .content {
+        padding: 1rem;
+    }
+}

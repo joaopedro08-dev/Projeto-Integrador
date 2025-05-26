@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dificuldades de Pronúncia em Inglês</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --azul-escuro: #214a7f;
+            --azul: #2a6ecd;
+            --azul-claro: #b0d2fa;
+            --azul-mais-claro: #eaf4ff;
+            --azul-destaque: #0d3c74;
+            --cinza: #445c7c;
+            --branco: #FFF;
+            --fonte-texto: 'Montserrat', Arial, sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: var(--azul-mais-claro) url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+            color: var(--azul-escuro);
+            font-family: var(--fonte-texto);
+            min-width: 320px;
+        }
+        
+        header {
+            background: linear-gradient(to bottom, #2a6ecdcc 0%, #214a7fee 100%);
+            padding: 52px 0 28px 0;
+            text-align: center;
+            color: var(--azul-claro);
+            box-shadow: 0 3px 30px #2a6ecd66;
+        }
+        
+        header h1 {
+            font-size: 2.4em;
+            font-family: var(--fonte-titulo);
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px #0d3c74cc;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.23em;
+            font-style: italic;
+            color: var(--azul-mais-claro);
+            text-shadow: 0 1px 2px #214a7fcc;
+            font-family: var(--fonte-titulo);
+        }
+        
+        nav {
+            background: var(--azul-claro);
+            text-align: center;
+            padding: 13px 0 9px 0;
+            border-bottom: 3px solid var(--azul);
+            font-family: var(--fonte-titulo);
+            font-size: 1.08em;
+            letter-spacing: 0.04em;
+            box-shadow: 0 2px 6px #2a6ecd22;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        nav a {
+            color: var(--azul-escuro);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 18px;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+            transition: all .2s;
+        }
+        
+        nav a:hover {
+            color: var(--azul);
+            border-bottom: 2px solid var(--azul);
+        }
+        
+        main {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 34px 22px 42px 22px;
+            background: var(--azul-mais-claro);
+            border-radius: 0 0 28px 28px;
+            box-shadow: 0 4px 20px #2a6ecd22;
+            font-size: 1.08em;
+        }
+        
+        .intro-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 38px;
+            margin-bottom: 54px;
+            align-items: stretch;
+        }
+        
+        .intro-info {
+            flex: 2;
+            min-width: 270px;
+        }
+        
+        .intro-info .intro-icon {
+            font-size: 2.5em;
+            color: var(--azul);
+            vertical-align: middle;
+        }
+        
+        .intro-info h2 {
+            display: inline-block;
+            font-size: 2em;
+            font-family: var(--fonte-titulo);
+            font-weight: 700;
+            margin-left: 12px;
+            vertical-align: middle;
+            letter-spacing: 1px;
+            color: var(--azul-escuro);
+        }
+        
+        .intro-info .desc {
+            color: var(--azul);
+            font-size: 1.13em;
+            margin: 7px 0 20px 0;
+            font-style: italic;
+        }
+        
+        .intro-info p {
+            margin-bottom: 14px;
+            font-size: 1.06em;
+            line-height: 1.75;
+        }
+        
+        .intro-img {
+            flex: 1.5;
+            min-width: 340px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .intro-img img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px #2a6ecd44;
+            border: 4px solid var(--azul-claro);
+            background: var(--branco);
+            min-height: 210px;
+            max-height: 320px;
+            display: block;
+        }
+        /* NOVA SEÇÃO: áudio+vídeo */
+        
+        .media-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 45px;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        
+        .media-box {
+            background: var(--azul-claro);
+            border-radius: 15px;
+            box-shadow: 0 2px 8px #2a6ecd22;
+            padding: 18px 18px 15px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 480px;
+            flex: 1 1 280px;
+            min-width: 220px;
+        }
+        
+        .media-box h3 {
+            font-size: 1.16em;
+            color: var(--azul);
+            font-family: var(--fonte-titulo);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .media-box audio,
+        .media-box iframe {
+            width: 100%;
+            margin-top: 7px;
+            max-width: 400px;
+        }
+        
+        .media-box audio {
+            margin-bottom: 6px;
+        }
+        
+        .media-desc {
+            font-size: 0.98em;
+            color: var(--cinza);
+            margin-top: 7px;
+            text-align: left;
+            font-style: italic;
+            width: 98%;
+            align-self: flex-start;
+        }
+        
+        .aside-block {
+            flex: 1.2;
+            min-width: 220px;
+            margin-left: 24px;
+            background: var(--azul-claro);
+            border-radius: 16px;
+            padding: 18px 18px;
+            box-shadow: 0 2px 8px #2a6ecd22;
+            font-size: 1.01em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: stretch;
+            overflow: hidden;
+        }
+        
+        .aside-block h3 {
+            font-size: 1.21em;
+            font-family: var(--fonte-titulo);
+            font-weight: 700;
+            margin-bottom: 13px;
+            color: var(--azul);
+            letter-spacing: 1px;
+        }
+        
+        .aside-block .item-titulo {
+            display: block;
+            font-weight: 700;
+            color: var(--azul-escuro);
+            margin-bottom: 0px;
+            font-size: 1.01em;
+        }
+        
+        .aside-block li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .aside-block ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .aside-block li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .aside-block .icon {
+            font-size: 1.5em;
+            margin-top: 2px;
+            flex-shrink: 0;
+            min-width: 1.5em;
+            text-align: center;
+        }
+        
+        .aside-block .item-text {
+            display: block;
+            font-size: 1em;
+            color: var(--azul-escuro);
+            line-height: 1.45;
+        }
+        
+        .aside-block strong {
+            font-weight: 700;
+            color: var(--azul-escuro);
+        }
+        
+        section {
+            margin-bottom: 38px;
+        }
+        
+        section h2 {
+            font-size: 1.45em;
+            color: var(--azul);
+            font-family: var(--fonte-titulo);
+            margin-bottom: 13px;
+            font-weight: 700;
+        }
+        
+        .galeria {
+            margin: 20px 0 18px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+        
+        .galeria figure {
+            margin: 0;
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .galeria img,
+        .grafico-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 2px 13px #2a6ecd22;
+            border: 3px solid var(--azul);
+            background: var(--branco);
+            min-height: 160px;
+            max-height: 340px;
+            display: block;
+        }
+        
+        .galeria figcaption {
+            font-size: .98em;
+            color: var(--cinza);
+            margin-top: 5px;
+            text-align: left;
+            font-style: italic;
+            width: 98%;
+            align-self: flex-start;
+        }
+        
+        .curiosidade {
+            background: var(--azul-claro);
+            border-left: 5px solid var(--azul);
+            margin: 20px 0 18px 0;
+            padding: 12px 22px 13px 19px;
+            border-radius: 8px;
+            font-size: 1.06em;
+            color: var(--azul-escuro);
+            box-shadow: 0 1px 6px #2a6ecd22;
+            font-style: italic;
+        }
+        
+        .timeline {
+            list-style: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
+        
+        .timeline li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 26px;
+            font-family: var(--fonte-titulo);
+        }
+        
+        .timeline li::before {
+            content: "📘";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--azul);
+            font-size: 1em;
+        }
+        
+        #quiz {
+            background: var(--azul-claro);
+            padding: 18px 16px;
+            border-radius: 14px;
+            max-width: 600px;
+            margin: 0 auto 32px auto;
+            box-shadow: 0 0 10px #2a6ecd17;
+        }
+        
+        #form-quiz .pergunta {
+            margin-bottom: 16px;
+        }
+        
+        #form-quiz p {
+            font-weight: 600;
+            color: var(--azul-escuro);
+            font-family: var(--fonte-titulo);
+        }
+        
+        #form-quiz input[type="radio"] {
+            margin-right: 7px;
+            accent-color: var(--azul);
+        }
+        
+        #form-quiz button {
+            margin-top: 12px;
+            background: var(--azul);
+            color: var(--branco);
+            border: none;
+            padding: 9px 23px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.06em;
+            cursor: pointer;
+            font-family: var(--fonte-titulo);
+            box-shadow: 0 2px 7px #214a7f44;
+            transition: background .2s, color .2s;
+        }
+        
+        #form-quiz button:hover {
+            background: var(--azul-destaque);
+            color: var(--azul-claro);
+        }
+        
+        #resultado-quiz {
+            margin-top: 13px;
+            font-weight: bold;
+            color: var(--azul);
+            font-size: 1.19em;
+            font-family: var(--fonte-titulo);
+        }
+        /* Gráficos customizados */
+        
+        .graficos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 22px 0 16px 0;
+        }
+        
+        .galeria-img,
+        .grafico-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: contain;
+            border-radius: 14px;
+            box-shadow: 0 2px 13px #2a6ecd22;
+            border: 3px solid var(--azul);
+            background: var(--branco);
+            min-height: 160px;
+            max-height: 340px;
+            display: block;
+        }
+        
+        .grafico {
+            max-width: 480px;
+            width: 100%;
+            flex: 1 1 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--branco);
+            border-radius: 13px;
+            box-shadow: 0 2px 13px #2a6ecd22;
+            border: 3px solid var(--azul-claro);
+            padding: 13px 10px 17px 10px;
+        }
+        
+        .grafico-titulo {
+            font-family: var(--fonte-titulo);
+            color: var(--azul);
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+        
+        .grafico-caption {
+            font-size: .97em;
+            color: var(--cinza);
+            margin-top: 7px;
+            text-align: left;
+            font-style: italic;
+            width: 98%;
+            align-self: flex-start;
+        }
+        
+        #btn-topo {
+            position: fixed;
+            bottom: 21px;
+            right: 17px;
+            background: var(--azul);
+            color: var(--branco);
+            font-size: 1.38em;
+            border-radius: 50%;
+            height: 38px;
+            width: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 3px 10px #2a6ecd22;
+            z-index: 50;
+            border: 2px solid var(--azul-mais-claro);
+            transition: background .2s;
+        }
+        
+        #btn-topo:hover {
+            background: var(--azul-destaque);
+            color: var(--azul-claro);
+        }
+        
+        footer {
+            background: var(--azul);
+            color: var(--azul-mais-claro);
+            text-align: center;
+            font-size: 1.05em;
+            padding: 16px 0 10px 0;
+            margin-top: 26px;
+            border-radius: 0 0 16px 16px;
+            font-family: var(--fonte-titulo);
+            letter-spacing: 0.03em;
+        }
+        
+        #resultado-quiz h3 {
+            color: #214a7f;
+            margin-bottom: 15px;
+        }
+        
+        #resultado-quiz div {
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            font-size: 1em;
+            line-height: 1.4;
+        }
+        
+        #resultado-quiz div.correto {
+            background-color: #cbe8ff;
+            color: #16406b;
+            border-left: 6px solid #92c6f9;
+        }
+        
+        #resultado-quiz div.errado {
+            background-color: #2a6ecd;
+            color: #eaf4ff;
+            border-left: 6px solid #78aeea;
+        }
+        
+        @media (max-width: 900px) {
+            .intro-block {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .aside-block {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            main {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .graficos {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .galeria figure,
+            .grafico {
+                max-width: 100%;
+            }
+            .media-section {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            header {
+                padding: 34px 0 17px 0;
+            }
+            header h1 {
+                font-size: 1.23em;
+            }
+            main {
+                padding: 7px 3px;
+            }
+            .intro-info h2 {
+                font-size: 1.1em;
+            }
+            .nav {
+                font-size: 0.97em;
+            }
+            .galeria img {
+                max-width: 100%;
+            }
+            .aside-block {
+                padding: 12px 7px;
+            }
+            .media-box {
+                padding: 12px 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Dificuldades de Pronúncia em Inglês</h1>
+        <p>Entenda os desafios e aprenda dicas para melhorar sua pronúncia!</p>
+    </header>
+
+    <nav>
+        <a href="#introducao">Introdução</a>
+        <a href="#media">Ouça e Assista</a>
+        <a href="#desafios">Principais Desafios</a>
+        <a href="#impactos">Por que é difícil?</a>
+        <a href="#dicas">Dicas de Pronúncia</a>
+        <a href="#curiosidades">Curiosidades</a>
+        <a href="#linha-tempo">Aprendizagem</a>
+        <a href="#grafico">Gráficos</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#conclusao">Conclusão</a>
+        <a href="#referencias">Referências</a>
+    </nav>
+
+    <main>
+        <section class="intro-block" id="introducao">
+            <div class="intro-info">
+                <span class="intro-icon">🗣️</span>
+                <h2>INTRODUÇÃO</h2>
+                <p class="desc">Por que falar inglês corretamente é tão difícil para brasileiros?</p>
+                <p>
+                    A pronúncia do inglês é um dos maiores desafios para quem aprende o idioma. Isso acontece porque vários sons do inglês não existem em português, as regras de leitura nem sempre são claras e muitas palavras são pronunciadas de forma diferente do que se
+                    escreve.
+                </p>
+                <p>
+                    Dominar a pronúncia é essencial para se comunicar bem, ser entendido e compreender melhor os nativos. Aqui, você vai entender os principais obstáculos e descobrir estratégias para melhorar sua fala!
+                </p>
+            </div>
+            <aside class="aside-block">
+                <h3>Desafios Mais Comuns</h3>
+                <ul>
+                    <li>
+                        <span class="icon" title="Sons não existentes">🔊</span>
+                        <div class="item-text">
+                            <span class="item-titulo">Sons inexistentes:</span> O inglês tem sons (como "th" e "r" americano) que não existem em português.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon" title="Palavras mudam som">🔄</span>
+                        <div class="item-text">
+                            <span class="item-titulo">Palavras mudam o som:</span> Muitas palavras são pronunciadas diferente do que parecem.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon" title="Acentuação diferente">🗯️</span>
+                        <div class="item-text">
+                            <span class="item-titulo">Acentuação:</span> O inglês coloca a sílaba tônica em lugares inesperados.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon" title="Consoantes finais">🔚</span>
+                        <div class="item-text">
+                            <span class="item-titulo">Consoantes finais:</span> Muitos brasileiros omitem sons finais, como em <em>“world”</em> ou <em>“cold”</em>.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon" title="Ligações rápidas">⏩</span>
+                        <div class="item-text">
+                            <span class="item-titulo">Ligações rápidas:</span> Os nativos unem as palavras, dificultando a compreensão.
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+
+        <!-- NOVA SEÇÃO: Ouça e Assista -->
+        <section class="media-section" id="media">
+            <div class="media-box">
+                <h3>Áudio: Exemplos de Pronúncia</h3>
+                <!-- Substitua o src pelo seu arquivo .mp3 local ou link apropriado -->
+                <audio controls>
+        <source src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfa1b82.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+                <div class="media-desc">
+                    Ouça exemplos de palavras e sons do inglês que costumam confundir brasileiros, como <b>TH</b>, <b>R</b> americano, e finais como <b>D</b> e <b>ED</b>.
+                </div>
+            </div>
+            <div class="media-box">
+                <h3>Vídeo: Dificuldades do Inglês para Brasileiros</h3>
+                <!-- Vídeo explicativo do YouTube -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nu7TjWZ6GrQ?si=jKtdzd8rDozwdcyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="media-desc">
+                    Assista a um vídeo explicando por que a pronúncia do inglês é difícil para quem fala português e dicas para superar!
+                </div>
+            </div>
+        </section>
+        <!-- FIM DA NOVA SEÇÃO -->
+
+        <section id="desafios">
+            <h2>Principais Dificuldades de Pronúncia</h2>
+            <div class="galeria">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Pessoa falando inglês">
+                    <figcaption>Pronunciar corretamente faz toda diferença na comunicação!</figcaption>
+                </figure>
+            </div>
+            <ul>
+                <li><strong>TH:</strong> O famoso “th” (como em <b>this</b> ou <b>think</b>) não tem equivalente em português e costuma ser substituído por “f”, “d” ou “s”.</li>
+                <li><strong>Sons curtos e longos:</strong> “ship” (navio) e “sheep” (ovelha) têm sons diferentes, mas muitos brasileiros pronunciam igual.</li>
+                <li><strong>Vogais diferentes:</strong> O inglês tem 12 sons vocálicos, o português só 7.</li>
+                <li><strong>Sons finais:</strong> A tendência de omitir ou suavizar consoantes no fim das palavras torna comunicações confusas.</li>
+                <li><strong>Entonação e ritmo:</strong> Inglês é mais “musical” e tem ritmo diferente do português.</li>
+            </ul>
+        </section>
+
+        <section id="impactos">
+            <h2>Por que é difícil pronunciar inglês?</h2>
+            <p>
+                A grande diferença entre os sons existentes nos dois idiomas é a principal causa. Além disso, o inglês é uma língua “não fonética”: a escrita nem sempre corresponde à pronúncia. Exemplo:
+                <span style="background:#cbe8ff;border-radius:6px;padding:0 3px 0 3px;">though (dou)</span>,
+                <span style="background:#cbe8ff;border-radius:6px;padding:0 3px 0 3px;">through (thru)</span>,
+                <span style="background:#cbe8ff;border-radius:6px;padding:0 3px 0 3px;">thought (thót)</span>.
+            </p>
+            <p>
+                A influência do português faz com que muitos sons sejam “aportuguesados”, dificultando a compreensão por nativos. A falta de treino auditivo também contribui: é preciso ouvir muito inglês para notar as diferenças.
+            </p>
+            <div class="curiosidade">
+                <strong>Curiosidade:</strong> A palavra “pronunciation” (pronúncia) é uma das mais pronunciadas erradas por estudantes do mundo todo!
+            </div>
+        </section>
+
+        <section id="dicas">
+            <h2>Dicas para Melhorar a Pronúncia</h2>
+            <ul>
+                <li><strong>Ouça inglês todos os dias:</strong> Podcasts, músicas e filmes ajudam a “treinar o ouvido”.</li>
+                <li><strong>Grave sua voz:</strong> Ouça e compare sua pronúncia com a de nativos.</li>
+                <li><strong>Aprenda o alfabeto fonético:</strong> Ele mostra os sons reais das palavras.</li>
+                <li><strong>Pratique sons difíceis isoladamente:</strong> Faça listas de palavras com “th”, “r”, “ed” final, etc.</li>
+                <li><strong>Use aplicativos de pronúncia:</strong> Vários apps mostram sons e corrigem sua voz.</li>
+            </ul>
+        </section>
+
+        <section id="curiosidades">
+            <h2>Curiosidades sobre a Pronúncia em Inglês</h2>
+            <ul>
+                <li><strong>O inglês tem mais de 40 sons diferentes</strong>, enquanto o português tem cerca de 30.</li>
+                <li><strong>“GH” silencioso:</strong> Em palavras como <em>“night”</em>, <em>“through”</em> e <em>“daughter”</em>, o “gh” não é pronunciado.</li>
+                <li><strong>Palavras iguais, sons diferentes:</strong> “read” no presente e “read” no passado têm a mesma escrita, mas pronúncia diferente.</li>
+                <li><strong>Línguas nativas influenciam:</strong> Brasileiros tendem a pronunciar “ed” em “worked” como “workéd”, mas o correto é “workt”.</li>
+                <li><strong>O “r” americano</strong> é feito com a língua enrolada para trás, diferente do “r” do português.</li>
+            </ul>
+        </section>
+
+        <section id="linha-tempo">
+            <h2>Linha do Tempo do Aprendizado de Pronúncia</h2>
+            <ul class="timeline">
+                <li><strong>Início:</strong> Reconhecer sons básicos do inglês.</li>
+                <li><strong>Primeiros meses:</strong> Identificar diferenças entre sons parecidos (ship x sheep, bat x bet).</li>
+                <li><strong>6 meses:</strong> Falar frases curtas e praticar sons difíceis.</li>
+                <li><strong>1 ano:</strong> Melhorar ritmo, entonação e entender filmes/músicas mais facilmente.</li>
+                <li><strong>Continuamente:</strong> Corrigir sotaque e aperfeiçoar a compreensão auditiva e produção oral.</li>
+            </ul>
+        </section>
+
+        <section id="grafico">
+            <h2>Gráficos</h2>
+            <div class="graficos">
+                <div class="grafico">
+                    <div class="grafico-titulo">Sons que mais causam dúvidas</div>
+                    <canvas id="graficoSons" width="320" height="180"></canvas>
+                    <div class="grafico-caption">Fonte: Pesquisa com estudantes brasileiros de inglês.</div>
+                </div>
+                <div class="grafico">
+                    <div class="grafico-titulo">Tempo médio até pronúncia avançada (anos)</div>
+                    <canvas id="graficoTempo" width="320" height="180"></canvas>
+                    <div class="grafico-caption">Fonte: Experiência de escolas de idiomas.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz">
+            <h2>Quiz: Pronúncia em Inglês</h2>
+            <form id="form-quiz">
+                <div class="pergunta">
+                    <p>1) Qual som não existe em português?</p>
+                    <input type="radio" name="q1" value="th"> O som "th" (como em "this") <br>
+                    <input type="radio" name="q1" value="b"> O som "b" <br>
+                    <input type="radio" name="q1" value="p"> O som "p" <br>
+                </div>
+                <div class="pergunta">
+                    <p>2) Como é pronunciada a palavra “though”?</p>
+                    <input type="radio" name="q2" value="tchou"> tchou <br>
+                    <input type="radio" name="q2" value="dou"> dou <br>
+                    <input type="radio" name="q2" value="tou"> tou <br>
+                </div>
+                <div class="pergunta">
+                    <p>3) O que acontece com o “ed” em “worked”?</p>
+                    <input type="radio" name="q3" value="workéd"> Pronuncia-se “workéd” <br>
+                    <input type="radio" name="q3" value="workt"> Pronuncia-se “workt” <br>
+                    <input type="radio" name="q3" value="worket"> Pronuncia-se “worket” <br>
+                </div>
+                <div class="pergunta">
+                    <p>4) Qual é uma dica essencial para melhorar a pronúncia?</p>
+                    <input type="radio" name="q4" value="Ler em silêncio"> Ler em silêncio <br>
+                    <input type="radio" name="q4" value="Praticar ouvindo nativos"> Praticar ouvindo nativos <br>
+                    <input type="radio" name="q4" value="Evitar ouvir músicas"> Evitar ouvir músicas <br>
+                </div>
+                <div class="pergunta">
+                    <p>5) Por que a pronúncia inglesa é tão desafiadora?</p>
+                    <input type="radio" name="q5" value="Porque é igual ao português"> Porque é igual ao português <br>
+                    <input type="radio" name="q5" value="Porque há sons e regras diferentes"> Porque há sons e regras diferentes <br>
+                    <input type="radio" name="q5" value="Porque não há vogais"> Porque não há vogais <br>
+                </div>
+                <button type="button" onclick="corrigirQuiz()">Corrigir</button>
+            </form>
+            <div id="resultado-quiz"></div>
+        </section>
+
+        <section id="conclusao">
+            <h2>Conclusão</h2>
+            <p>
+                Aprender a pronunciar bem o inglês exige paciência, prática diária e muita escuta. Com dedicação, é possível superar os bloqueios e falar com mais confiança!
+            </p>
+        </section>
+
+        <section id="referencias">
+            <h2>Referências</h2>
+            <ul>
+                <li><a href="https://www.britishcouncil.org.br/blog/como-melhorar-pronuncia-em-ingles" target="_blank">British Council – Como melhorar a pronúncia</a></li>
+                <li><a href="https://www.cambridgeenglish.org/pt-br/learning-english/exams/for-learners/skills/pronunciation/" target="_blank">Cambridge English – Pronunciation</a></li>
+                <li><a href="https://www.englishclub.com/pronunciation/" target="_blank">EnglishClub – Pronunciation</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>FEITO POR SILVEIRA © 2025</p>
+    </footer>
+    <a href="#" id="btn-topo">↑</a>
+
+    <script>
+        function corrigirQuiz() {
+            const gabarito = [{
+                correta: "th",
+                explicacao: "O som 'th' não existe em português, por isso é difícil para brasileiros."
+            }, {
+                correta: "dou",
+                explicacao: "A palavra 'though' se pronuncia 'dou'."
+            }, {
+                correta: "workt",
+                explicacao: "O 'ed' em 'worked' soa como 't': 'workt'."
+            }, {
+                correta: "Praticar ouvindo nativos",
+                explicacao: "Ouvir nativos é fundamental para melhorar a pronúncia!"
+            }, {
+                correta: "Porque há sons e regras diferentes",
+                explicacao: "O inglês tem sons e regras diferentes do português, tornando a pronúncia desafiadora."
+            }];
+
+            let score = 0;
+            let resultado = "";
+            const perguntas = document.querySelectorAll(".pergunta");
+
+            perguntas.forEach((perguntaDiv, index) => {
+                const respostaSelecionada = perguntaDiv.querySelector("input:checked");
+                const dados = gabarito[index];
+
+                let div = document.createElement("div");
+
+                if (!respostaSelecionada) {
+                    div.classList.add("errado");
+                    div.innerHTML = `<strong>Questão ${index + 1}:</strong> ❌ Não respondida.<br>
+          Resposta correta: <strong>${dados.correta}</strong><br>
+          <em>${dados.explicacao}</em>`;
+                } else if (respostaSelecionada.value === dados.correta) {
+                    score++;
+                    div.classList.add("correto");
+                    div.innerHTML = `<strong>Questão ${index + 1}:</strong> ✅ Correto!<br>
+          <em>${dados.explicacao}</em>`;
+                } else {
+                    div.classList.add("errado");
+                    div.innerHTML = `<strong>Questão ${index + 1}:</strong> ❌ Errado.<br>
+          Sua resposta: <u>${respostaSelecionada.value}</u><br>
+          Resposta correta: <strong>${dados.correta}</strong><br>
+          <em>${dados.explicacao}</em>`;
+                }
+
+                resultado += div.outerHTML;
+            });
+
+            document.getElementById("resultado-quiz").innerHTML = `<h3>Você acertou ${score} de 5 questões!</h3>${resultado}`;
+        }
+
+        // Gráfico Sons que mais causam dúvidas
+        window.onload = function() {
+            var ctxSons = document.getElementById('graficoSons').getContext('2d');
+            var ctxTempo = document.getElementById('graficoTempo').getContext('2d');
+            // Sons
+            var sons = ["TH", "R americano", "Vogais longas", "Consoantes finais", "Entonação"];
+            var valores = [85, 70, 60, 55, 40];
+            // Tempo
+            var etapas = ["Reconhecer sons", "Distinguir sons", "Falar frases", "Ritmo/Entonação", "Fluência avançada"];
+            var anos = [0.3, 0.7, 1.2, 2, 3.5];
+
+            // Criando gráficos simples
+            // Sons (barras horizontais)
+            ctxSons.fillStyle = "#2a6ecd";
+            for (let i = 0; i < sons.length; i++) {
+                ctxSons.fillRect(30, 20 + i * 30, valores[i] * 2.5, 22);
+                ctxSons.fillStyle = "#214a7f";
+                ctxSons.font = "bold 14px Montserrat";
+                ctxSons.fillText(sons[i], 5, 36 + i * 30);
+                ctxSons.fillStyle = "#2a6ecd";
+                ctxSons.fillText(valores[i] + "%", 40 + valores[i] * 2.5, 36 + i * 30);
+            }
+
+            // Tempo (gráfico de linhas)
+            ctxTempo.strokeStyle = "#2a6ecd";
+            ctxTempo.lineWidth = 3;
+            ctxTempo.beginPath();
+            for (let i = 0; i < anos.length; i++) {
+                let x = 50 + i * 50;
+                let y = 150 - anos[i] * 35;
+                if (i === 0) ctxTempo.moveTo(x, y);
+                else ctxTempo.lineTo(x, y);
+                // Pontos
+                ctxTempo.fillStyle = "#2a6ecd";
+                ctxTempo.beginPath();
+                ctxTempo.arc(x, y, 5, 0, Math.PI * 2);
+                ctxTempo.fill();
+                // Texto
+                ctxTempo.fillStyle = "#16406b";
+                ctxTempo.font = "bold 13px Montserrat";
+                ctxTempo.fillText(anos[i] + "a", x - 10, y - 10);
+                ctxTempo.fillStyle = "#214a7f";
+                ctxTempo.font = "12px Montserrat";
+                ctxTempo.fillText(etapas[i], x - 30, 170);
+            }
+            ctxTempo.stroke();
+        };
+    </script>
+
+    <div vw class="enabled ">
+        <div vw-access-button class="active "></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper "></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js "></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

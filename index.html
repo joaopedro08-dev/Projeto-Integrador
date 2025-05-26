@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Integrador - Equipe 2</title>
+    <meta name="author" content="Renan Cadamuro Carrara, João Pedro Dala Dea Mello, Guilherme Ferreira Matias de Oliveira, 
+    Matheus Guerra Brisola Cardoso, Gabriel Silveira Mariano de Souza, Igor Schanoski Pedro da Silva, 
+    Vinicius Feliciano Barbosa, Kauany Gabrieli Ribeiro Cavatoni">
+    <meta name="description" content="Projeto Integrador SESI/SENAI de Ourinhos(SP) - Equipe 2">
+    <meta name="keywords" content="Português, Matemática, Inglês, Geografia, História, Química, Física, Biologia">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(to right, #f9f9f9, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 50px;
+            width: 100%;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            text-align: center;
+            flex-grow: 1;
+            margin: 0 20px;
+            letter-spacing: 1.5px;
+        }
+        
+        .logo {
+            height: 50px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 40px 20px;
+        }
+        
+        .custom-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            width: 280px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .custom-card-header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .custom-card-title {
+            font-size: 22px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        
+        .custom-card-subtitle {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        
+        .custom-card-content {
+            font-size: 15px;
+            color: #555;
+            flex-grow: 1;
+        }
+        
+        .custom-card-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .custom-button a {
+            background-color: #e71313;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .custom-button a:hover {
+            background-color: #9f0000;
+        }
+        
+        .custom-button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+        
+        .footer {
+            background: transparent;
+            padding: 20px;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        @media screen and (max-width:768px) {
+            .header {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <img src="img/senai.png" alt="Logo Senai" class="logo">
+        <h1>Projeto Integrador</h1>
+        <img src="img/sesi.png" alt="Logo Sesi" class="logo">
+    </header>
+
+    <div class="container" id="card-container"></div>
+
+    <footer class="footer">
+        <p>&copy; 2025 <strong>Projeto Integrador.</strong> Todos os direitos Reservados.</p>
+    </footer>
+
+    <script>
+        const materias = [{
+            nome: "Biologia",
+            subtitulo: "Cnidários",
+            link: "biologia/index.html"
+        }, {
+            nome: "Química",
+            subtitulo: "Anabolizantes",
+            link: "quimica/index.html"
+        }, {
+            nome: "Física",
+            subtitulo: "Eletricidade",
+            link: "fisica/index.html"
+        }, {
+            nome: "Geografia",
+            subtitulo: "Aspectos dinâmicos da Terra",
+            link: "geografia/index.html"
+        }, {
+            nome: "História",
+            subtitulo: "Ciclo da Borracha- Brasil",
+            link: "historia/index.html"
+        }, {
+            nome: "Inglês",
+            subtitulo: "English Pronunciation",
+            link: "ingles/index.html"
+        }, {
+            nome: "Português",
+            subtitulo: "Modernismo - 1ª fase",
+            link: "portugues/index.html"
+        }, {
+            nome: "Matemática",
+            subtitulo: "Juros Simples e Compostos",
+            link: "matematica/index.html"
+        }];
+
+        const container = document.getElementById("card-container");
+
+        materias.forEach(materia => {
+            const card = document.createElement("div");
+            card.classList.add("custom-card");
+
+            card.innerHTML = `
+                <div class="custom-card-header">
+                    <h2 class="custom-card-title">${materia.nome}</h2>
+                    <p class="custom-card-subtitle">${materia.subtitulo}</p>
+                </div>
+                <div class="custom-card-content">
+                    Conteúdo introdutório sobre ${materia.nome}.
+                </div>
+                <div class="custom-card-actions">
+                    <button class="custom-button">
+                        <a href="${materia.link}" target="_blank">Entrar</a>
+                    </button>
+                </div>
+            `;
+
+            container.appendChild(card);
+        });
+    </script>
+</body>
+
+</html>
