@@ -6,7 +6,7 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 </div>
 
-The **Integrative Project** was developed in 2024 by 3rd-year students of **SESI Ourinhos** (SP), in partnership with **SENAI**.
+The **Integrative Project** was developed in 2025 by 3rd-year students of **SESI Ourinhos** (SP), in partnership with **SENAI**.
 🎯 The main objective was to build an **educational website** applying the technical knowledge of **HTML**, **CSS**, and **JavaScript** (optional), learned in the SENAI classes.
 
 Additionally, the project involved **pedagogical research** in 8 school subjects, fostering the integration of technical and academic content.
